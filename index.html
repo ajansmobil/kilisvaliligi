@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Mobilde tam ekran ve sabit olcek davranisi icin viewport ayarlari uygulanir. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Mobil tarayicilarda uygulama benzeri gorunum elde etmek icin web app metasi eklenir. -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Kilis Kultur Yolu Haritasi</title>
+    <style>
+      :root {
+        --bg-main: #0f2f96;
+        --bg-button: #0a236f;
+        --text-main: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Sayfayi mobil uygulama ekrani gibi gostermek icin govdeyi ortaliyoruz. */
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: var(--bg-main);
+        /* Arka plan gorseli kullanicinin belirttigi bg.jpeg dosyasina baglandi. */
+        background-image: url("./bg.jpeg");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        color: var(--text-main);
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      /* Icerik kapsayicisi mobil cihazlarda maksimum 420px genislikte kalir. */
+      .app {
+        width: min(100%, 420px);
+        min-height: 100dvh;
+        padding: 22px 22px 36px;
+        display: flex;
+        flex-direction: column;
+        /* Icerigi ekranin hem yatay hem dikey ekseninde ortalar. */
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .brand {
+        width: 100%;
+        margin-top: 12px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .brand img {
+        width: min(100%, 290px);
+        height: auto;
+        object-fit: contain;
+      }
+
+      .title {
+        /* Baslik, dikey ortalama bozulmamasi icin ekstra ust bosluk almaz. */
+        margin-top: 0;
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        line-height: 1.3;
+        /* Baslik metni kullanici talebine gore biraz kucultuldu. */
+        font-size: 26px;
+        margin-bottom: 25px;
+        margin-top: 25px;
+      }
+
+      .menu {
+        /* Menu, basliktan sonra sabit boslukla gelmesi icin ust marjin sifirlandi. */
+        margin-top: 0;
+        /* Menu blogu ekran ortasina sabit genislikte konumlanir. */
+        width: min(100%, 360px);
+        display: flex;
+        flex-direction: column;
+        /* Menu grubundaki her buton yatay eksende ortalanir. */
+        align-items: center;
+        margin-inline: auto;
+        gap: 12px;
+      }
+
+      /* Menu butonlarini referans gorsele benzer sekilde koyu mavi ve oval yapiyoruz. */
+      .menu a {
+        /* Butonlar menu blogunun tamamini kaplayarak tam ortada durur. */
+        width: 100%;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: var(--text-main);
+        background-color: rgba(10, 35, 111, 0.92);
+        border-radius: 14px;
+        padding: 13px 12px;
+        /* Menu metinleri daha derli toplu gorunum icin kucultuldu. */
+        font-size: 23px;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+      }
+
+      .menu a:hover,
+      .menu a:focus-visible {
+        background-color: #0d2f93;
+        transform: translateY(-1px);
+      }
+
+      /* Telefon yatay modda acildiginda kullaniciya dik konuma gecmesi gerektigi net mesajla gosterilir. */
+      .orientation-warning {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        background: rgba(8, 28, 92, 0.97);
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 24px;
+      }
+
+      /* Ekran yatay oldugunda icerik gizlenir, sadece dik moda gecis uyarisini gosteririz. */
+      @media (orientation: landscape) {
+        .app {
+          display: none;
+        }
+
+        .orientation-warning {
+          display: flex;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .title {
+          font-size: 20px;
+          margin-top: 26px;
+        }
+
+        .menu a {
+          font-size: 19px;
+          padding: 12px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobil cihaz yatay konuma gecerse kullaniciya uygulamayi dik kullanma talimati verilir. -->
+    <div class="orientation-warning">Lutfen telefonu dik konumda kullanin.</div>
+    <main class="app">
+    
+
+      <!-- Baslik alani, referans gorsele gore iki satirli bir yapiyla konumlandirildi. -->
+      <section class="title">
+        KİLİS<br />
+        KÜLTÜR YOLU HARİTASI
+      </section>
+
+      <!-- Ana menudeki basliklar, kullanicinin verdigi referans menuler ile ayni sirada tutuldu. -->
+      <nav class="menu" aria-label="Ana menu">
+        <!-- Menudeki tum secenekler, kullanicinin talebine gore ayni PDF dosyasini acar. -->
+        <a href="./www.gap.gov.tr_285_SD0L39HF.pdf" target="_blank" rel="noopener noreferrer">KİLİS TARİHİ</a>
+        <a href="./www.gap.gov.tr_285_SD0L39HF.pdf" target="_blank" rel="noopener noreferrer">KİLİS KÜLTÜR YOLU</a>
+        <a href="./www.gap.gov.tr_285_SD0L39HF.pdf" target="_blank" rel="noopener noreferrer">KİLİS İL TURİZM HARİTASI</a>
+        <a href="./www.gap.gov.tr_285_SD0L39HF.pdf" target="_blank" rel="noopener noreferrer">KİLİS VALİLİĞİ</a>
+      </nav>
+    </main>
+
+    <script>
+      /* Destekleyen cihazlarda ekran yonunu dik moda kilitlemeyi deneriz; destek yoksa CSS uyarisi devrede kalir. */
+      (async function tryLockPortrait() {
+        try {
+          if (screen.orientation && typeof screen.orientation.lock === "function") {
+            await screen.orientation.lock("portrait");
+          }
+        } catch (_error) {
+          /* Bircok mobil tarayici bu ozelligi izinlere bagli tuttugu icin hata sessizce yoksayilir. */
+        }
+      })();
+    </script>
+  </body>
+</html>
