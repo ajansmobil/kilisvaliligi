@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kilis Gezi Haritası — Tarihi ve turistik noktaları keşfedin">
+  <title>Kilis Gezi Haritası</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Açılış logosu — sayfa yüklenince ortada animasyonla gelir ve gider -->
+  <div id="logo-splash" class="logo-splash" aria-hidden="true">
+    <img src="assets/logo.svg" alt="Kilis Gezi Haritası" class="logo-splash-img">
+  </div>
+
+  <!-- Yükleme ekranı -->
+  <div id="yukleniyor" class="yukleniyor">
+    <div class="yukleniyor-spinner"></div>
+    <p>Harita yükleniyor...</p>
+  </div>
+
+  <!-- Üst başlık çubuğu -->
+  <header class="header">
+    <button id="menu-toggle" class="menu-toggle" aria-label="Menüyü aç/kapat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+    <h1 class="header-title">Kilis Gezi Haritası</h1>
+    <span class="header-subtitle">Keşfet · Gez · Öğren</span>
+  </header>
+
+  <!-- Soldan açılan yan menü -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h2>Gezi Noktaları</h2>
+      <p>Kilis'in tarihi ve turistik yerlerini keşfedin</p>
+    </div>
+
+    <!-- Kategori filtre butonları -->
+    <div id="kategori-filtreler" class="kategori-filtreler"></div>
+
+    <!-- Konum kartları listesi -->
+    <div id="konum-listesi" class="konum-listesi"></div>
+  </aside>
+
+  <!-- Mobil menü arka plan karartması -->
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+  <!-- Google Maps harita alanı -->
+  <main id="harita-kapsayici" class="harita-kapsayici">
+    <div id="harita"></div>
+  </main>
+
+  <!-- Veri dosyası (UTF-8 Türkçe karakter desteği) -->
+  <script charset="UTF-8" src="data/locations.js"></script>
+
+  <!-- Uygulama yapılandırması ve modülleri -->
+  <script src="js/config.js"></script>
+  <script src="js/splash.js"></script>
+  <script src="js/gorsel.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/map.js"></script>
+
+  <!-- Google Maps API yükleyici -->
+  <script>
+    (function () {
+      const script = document.createElement("script");
+      script.src =
+        "https://maps.googleapis.com/maps/api/js?key=" +
+        GOOGLE_MAPS_API_KEY +
+        "&callback=initMap";
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  </script>
+
+</body>
+</html>

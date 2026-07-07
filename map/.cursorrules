@@ -1,0 +1,24 @@
+# Kilis Gezi Haritası — Proje Kuralları
+
+## Proje Yapısı
+- Her modül kendi dosyasında bağımsız çalışır (_shared klasörü kullanılmaz)
+- Veri: data/locations.js (UTF-8 BOM, `generate-locations.py` ile üretilir)
+- Görseller: assets/yerler/{id}/index.jpg (her konum kendi klasöründe)
+- Ham fotoğraflar: assets/kaynak/ham-fotograflar/
+- Tasarım kaynakları: assets/kaynak/tasarim/
+
+## Kod Standartları
+- Yorum satırları Türkçe ve açıklayıcı olmalı
+- Değişken/fonksiyon adları Türkçe veya İngilizce tutarlı kullanılmalı
+- IIFE modül paterni tercih edilir (global kirliliği önlemek için)
+
+## Google Maps
+- API anahtarı index.html içinde YOUR_API_KEY olarak bırakılır
+- initMap global callback fonksiyonu map.js'de tanımlıdır
+
+## Görseller
+- assets/yerler/{konum-id}/index.jpg — her yer için ayrı klasör, görüntülenen dosya index.jpg
+- QR kodlu görseller `qrGorsel: true` ile işaretlenir, menüde en altta sıralanır
+
+## Kategoriler
+tarihi, arkeoloji, dini, kultur, doga
