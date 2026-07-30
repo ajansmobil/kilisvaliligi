@@ -186,7 +186,9 @@ body {
   display: none;
 }
 
-/* Menü arka plan karartması (mobil + masaüstü) */
+/* Menü arka plan karartması — yalnızca mobilde (bkz. aşağıdaki @media),
+   masaüstünde harita menünün yanında zaten görünür ve kullanılabilir
+   kalması gerektiğinden karartılıp tıklanamaz hale getirilmemeli. */
 .sidebar-overlay {
   position: fixed;
   inset: 0;
@@ -197,11 +199,6 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--gecis), visibility var(--gecis);
-}
-
-.sidebar-overlay.gorunur {
-  opacity: 1;
-  visibility: visible;
 }
 
 /* Menü başlık alanı */
@@ -429,7 +426,6 @@ body {
 
 .konum-etiket {
   display: inline-block;
-  margin-top: 8px;
   padding: 3px 10px;
   border-radius: 12px;
   font-size: 0.68rem;
@@ -444,6 +440,42 @@ body {
 .etiket-dini { background: var(--cat-dini-acik); color: var(--cat-dini); }
 .etiket-kultur { background: var(--cat-kultur-acik); color: var(--cat-kultur); }
 .etiket-doga { background: var(--cat-doga-acik); color: var(--cat-doga); }
+
+/* Rozet + yol tarifi butonunu aynı satırda tutan kapsayıcı */
+.konum-alt-satir {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Google Maps navigasyonuna yönlendiren "Yol Tarifi Al" butonu */
+.yol-tarifi-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 11px;
+  border-radius: 14px;
+  background: var(--renk-birincil);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background var(--gecis);
+}
+
+.yol-tarifi-btn:hover {
+  background: var(--renk-birincil-koyu);
+}
+
+.yol-tarifi-btn svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
 
 /* ── Harita Alanı ── */
 .harita-kapsayici {
@@ -618,6 +650,12 @@ body {
 
   .header-logo {
     display: none;
+  }
+
+  /* Karartma yalnızca mobilde etkinleşir (alttan açılan panelin arkasında) */
+  .sidebar-overlay.gorunur {
+    opacity: 1;
+    visibility: visible;
   }
 
   /* Mobilde harita kaymaz, overlay + alttan açılan panel kullanılır */

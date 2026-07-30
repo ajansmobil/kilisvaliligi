@@ -30,6 +30,33 @@ const Menu = (function () {
   };
 
   /**
+   * Google Maps yol tarifi URL'si — konum ne olursa olsun, kullanıcının
+   * bulunduğu yerden hedefe navigasyon başlatır (API anahtarı gerektirmez)
+   * @param {Object} konum - Konum veri nesnesi
+   */
+  function yolTarifiUrl(konum) {
+    const params = new URLSearchParams({
+      api: "1",
+      destination: `${konum.lat},${konum.lng}`,
+    });
+    return `https://www.google.com/maps/dir/?${params.toString()}`;
+  }
+
+  /**
+   * "Yol Tarifi Al" bağlantısının HTML'i — konum kartında ve info window'da
+   * ortak kullanılır
+   * @param {Object} konum - Konum veri nesnesi
+   */
+  function yolTarifiLinkHtml(konum) {
+    return `
+      <a class="yol-tarifi-btn" href="${yolTarifiUrl(konum)}" target="_blank" rel="noopener noreferrer" aria-label="${konum.name} için yol tarifi al">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-8-8 18-2-8-8-2Z"/></svg>
+        Yol Tarifi
+      </a>
+    `;
+  }
+
+  /**
    * QR kodlu görselli konumları listenin sonuna taşır
    * @param {Array} konumlar - Sıralanacak konum dizisi
    */
@@ -215,13 +242,20 @@ const Menu = (function () {
       bilgi.className = "konum-bilgi";
       bilgi.innerHTML = `
         <p>${konum.description}</p>
-        <span class="konum-etiket etiket-${konum.category}">
-          ${KATEGORI_ETIKETLERI[konum.category] || konum.category}
-        </span>
+        <div class="konum-alt-satir">
+          <span class="konum-etiket etiket-${konum.category}">
+            ${KATEGORI_ETIKETLERI[konum.category] || konum.category}
+          </span>
+          ${yolTarifiLinkHtml(konum)}
+        </div>
       `;
 
       kart.appendChild(gorselWrap);
       kart.appendChild(bilgi);
+
+      /* Yol tarifi linki kendi sekmesinde açılır; karta tıklanmış gibi
+         haritayı da oynatmaması için olay üst kart dinleyicisine sızmaz. */
+      bilgi.querySelector(".yol-tarifi-btn").addEventListener("click", (e) => e.stopPropagation());
 
       kart.addEventListener("click", () => konumSecildi(konum));
       listeEl.appendChild(kart);
@@ -266,5 +300,6 @@ const Menu = (function () {
     konumVurgula,
     menuAc,
     kategoriEtiketleri: KATEGORI_ETIKETLERI,
+    yolTarifiLinkHtml,
   };
 })();

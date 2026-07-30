@@ -34,11 +34,15 @@
         min-height: 100dvh;
         font-family: "Manrope", Arial, Helvetica, sans-serif;
         background-color: var(--bg-main);
-        /* Arka plan gorseli kullanicinin belirttigi bg.jpeg dosyasina baglandi. */
+        /* Arka plan gorseli kullanicinin belirttigi bg.jpeg dosyasina baglandi.
+           Gorsel dikey (portre) oldugundan, genis masaustu ekranlarinda
+           background-size:cover muhur ve basligi asiri kirpip devasa
+           gosteriyordu; contain ile gorsel hicbir zaman kirpilmiyor, tasan
+           alanlar background-color ile ayni lacivert tonda dolduruluyor. */
         background-image: url("./bg.jpeg");
         background-repeat: no-repeat;
         background-position: center top;
-        background-size: cover;
+        background-size: contain;
         color: var(--text-main);
         display: flex;
         justify-content: center;
@@ -51,12 +55,17 @@
       .app {
         width: min(100%, 420px);
         margin: auto;
-        padding: max(18px, env(safe-area-inset-top)) max(22px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom))
+        /* Ust bosluk 22vh'e dayali: bg.jpeg "contain" ile yerlestirildiginde,
+           muhur+baslik gorselin ilk ~%20'sinde sabit kalir (genis/kisa
+           masaustu pencerelerinde gorsel tam yukseklige oturur). Sabit bir
+           yuzde kullanmak, panelin her ekran yuksekliginde muhru kesmeden
+           onun altinda baslamasini saglar; justify-content:center yerine
+           bu hesaplanmis bosluk kullanilir. */
+        padding: max(18px, 22vh, env(safe-area-inset-top)) max(22px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom))
           max(22px, env(safe-area-inset-left));
         display: flex;
         flex-direction: column;
-        /* Baslik ve menu blogu ekranin tam ortasinda kalir. */
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
       }
 
