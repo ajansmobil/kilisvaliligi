@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Kilis Valiliği — PDF belgelerini kitap gibi çevirerek okuyun">
+  <meta name="theme-color" content="#3d4238">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Kitap Görüntüleyici</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+
+  <!-- İlk yükleme ekranı: PDF belgesi açılırken gösterilir -->
+  <div id="yukleniyor" class="yukleniyor">
+    <div class="yukleniyor-spinner"></div>
+    <p>Kitap hazırlanıyor…</p>
+  </div>
+
+  <!-- Hata durumu: dosya parametresi eksikse veya PDF açılamazsa gösterilir -->
+  <div id="hata" class="hata" hidden>
+    <p id="hata-metin">Belge yüklenemedi.</p>
+    <a href="../" class="hata-geri">‹ Ana sayfaya dön</a>
+  </div>
+
+  <!-- Üst bilgi çubuğu -->
+  <header class="ust-bar">
+    <button id="geri-btn" class="geri-btn" aria-label="Geri dön">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </button>
+    <h1 id="kitap-baslik" class="kitap-baslik">Kitap</h1>
+    <div class="ust-bar-sag">
+      <span id="sayfa-gostergesi" class="sayfa-gosterge">– / –</span>
+      <a id="indir-btn" class="indir-btn" aria-label="PDF olarak indir" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v12"/>
+          <polyline points="7 11 12 16 17 11"/>
+          <line x1="4" y1="20" x2="20" y2="20"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Kitap sahnesi -->
+  <main class="sahne">
+    <button id="onceki-btn" class="ok-btn ok-sol" aria-label="Önceki sayfa">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+
+    <div id="kitap-govde" class="kitap-govde">
+      <div class="sayfa-taban"><canvas id="taban-canvas"></canvas></div>
+
+      <div id="yaprak" class="yaprak">
+        <div class="yuz yuz-on"><canvas id="on-canvas"></canvas></div>
+        <div class="yuz yuz-arka"><canvas id="arka-canvas"></canvas></div>
+      </div>
+
+      <div id="sayfa-yukleniyor" class="sayfa-yukleniyor" hidden><div class="yukleniyor-spinner kucuk"></div></div>
+
+      <button class="tik-alani tik-sol" aria-label="Önceki sayfa"></button>
+      <button class="tik-alani tik-sag" aria-label="Sonraki sayfa"></button>
+    </div>
+
+    <button id="sonraki-btn" class="ok-btn ok-sag" aria-label="Sonraki sayfa">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </main>
+
+  <!-- PDF.js (kitap sayfalarının render edilmesi için) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script defer src="js/kitap.js"></script>
+</body>
+</html>

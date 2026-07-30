@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Kilis Kültür Kütüphanesi — dijital raftan kitapları keşfedin">
+  <meta name="theme-color" content="#3d4238">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Kilis Kültür Kütüphanesi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+
+  <!-- Üst bilgi çubuğu -->
+  <header class="ust-bar">
+    <a href="../" class="geri-btn" aria-label="Ana sayfaya dön">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </a>
+    <h1 class="baslik">Kilis Kültür Kütüphanesi</h1>
+  </header>
+
+  <main class="sahne">
+
+    <!-- Kapalı kütüphane dolabı — açılmadan önce gösterilir -->
+    <section id="dolap-sahne" class="dolap-sahne">
+      <div class="dolap-govde">
+        <div class="dolap-ic"></div>
+        <div id="kapi-sol" class="kapi kapi-sol">
+          <span class="kapi-tokmak"></span>
+        </div>
+        <div id="kapi-sag" class="kapi kapi-sag">
+          <span class="kapi-tokmak"></span>
+        </div>
+      </div>
+      <button id="dolap-ac-btn" class="dolap-ac-btn">
+        <span class="dolap-ac-simge">📚</span>
+        Kütüphaneyi Aç
+      </button>
+    </section>
+
+    <!-- Raflar — dolap açıldıktan sonra görünür -->
+    <section id="raf-alani" class="raf-alani" hidden>
+      <p class="raf-not">Raftaki kitaplar yakında içerikleriyle dolacak — göz atmak için birine dokunun.</p>
+      <div id="raf-liste" class="raf-liste"></div>
+    </section>
+
+  </main>
+
+  <!-- Boş kitap bilgi paneli -->
+  <div id="bilgi-panel" class="bilgi-panel-katman" hidden>
+    <div class="bilgi-panel" role="dialog" aria-modal="true" aria-labelledby="bilgi-panel-baslik">
+      <span class="bilgi-panel-simge">📖</span>
+      <h2 id="bilgi-panel-baslik">Yakında</h2>
+      <p>Bu kitabın içeriği yakında eklenecektir.</p>
+      <button id="bilgi-panel-kapat" class="bilgi-panel-kapat">Kapat</button>
+    </div>
+  </div>
+
+  <script src="data/kitaplar.js"></script>
+  <script src="js/kutuphane.js"></script>
+</body>
+</html>

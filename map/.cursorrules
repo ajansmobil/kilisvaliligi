@@ -2,7 +2,7 @@
 
 ## Proje Yapısı
 - Her modül kendi dosyasında bağımsız çalışır (_shared klasörü kullanılmaz)
-- Veri: data/locations.js (UTF-8 BOM, `generate-locations.py` ile üretilir)
+- Veri: data/locations.js (UTF-8, elle düzenlenir; koordinat kaynağı: haritadaki QR kodları)
 - Görseller: assets/yerler/{id}/index.jpg (her konum kendi klasöründe)
 - Ham fotoğraflar: assets/kaynak/ham-fotograflar/
 - Tasarım kaynakları: assets/kaynak/tasarim/

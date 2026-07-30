@@ -1,0 +1,281 @@
+001. Söğütlüdere Dinlenme Tesisleri  [Sayfa 1]
+     Dosya: 001_sayfa1_Söğütlüdere_Dinlenme_Tesisleri.png
+     Konum (kesin pin): 36.7049918, 37.1702188
+     (Onceki @-merkez koordinati: 36.7068944, 37.1617717)
+     Link : https://www.google.com/maps/place/Söğütlüdere+Dinlenme+Tesisleri/@36.7068944,37.1617717,16z/data=!4m8!1m2!2m1!1za2lsaXMgc8O2xJ_DvHRsw7xkZXJlIGfDtmzDvA!3m4!1s0x0:0x269998b26a0d9355!8m2!3d36.7049918!4d37.1702188
+
+002. Seve Barajı, 79002 Küplüce/Kilis Merkez/Kilis  [Sayfa 1]
+     Dosya: 002_sayfa1_Seve_Barajı_79002_KüplüceKilis_MerkezKilis.png
+     Konum (kesin pin): 36.736111, 37.241944
+     (Onceki @-merkez koordinati: 36.736111, 37.2397553)
+     Link : https://www.google.com/maps/place/Seve+Barajı,+79002+Küplüce%2FKilis+Merkez%2FKilis/@36.736111,37.2397553,17z/data=!3m1!4b1!4m5!3m4!1s0x152fd4e85babdafd:0x17c24ef72e34264e!8m2!3d36.736111!4d37.241944
+
+003. Şurahbil Türbesi  [Sayfa 1]
+     Dosya: 003_sayfa1_Şurahbil_Türbesi.png
+     Konum (kesin pin): 36.722537, 37.1225941
+     (Onceki @-merkez koordinati: 36.7225413, 37.1204054)
+     Link : https://www.google.com/maps/place/Şurahbil+Türbesi/@36.7225413,37.1204054,17z/data=!4m12!1m6!3m5!1s0x152fce010f8d4e93:0x79187ea3bb3b3943!2zxZ51cmFoYmlsIFTDvHJiZXNp!8m2!3d36.722537!4d37.1225941!3m4!1s0x152fce010f8d4e93:0x79187ea3bb3b3943!8m2!3d36.722537!4d37.1225941
+
+004. Çok Amaçlı Toplum Merkezi (Çatom)  [Sayfa 1]
+     Dosya: 004_sayfa1_Çok_Amaçlı_Toplum_Merkezi_Çatom.png
+     Konum (kesin pin): 36.715332, 37.119334
+     Link : https://www.google.com/maps/place/Çok+Amaçlı+Toplum+Merkezi+(Çatom)/@36.715332,37.119334,15z/data=!4m5!3m4!1s0x0:0x4a30a671333fc3a1!8m2!3d36.715332!4d37.119334
+
+005. Hükümet Konağı  [Sayfa 1]
+     Dosya: 005_sayfa1_Hükümet_Konağı.png
+     Konum (kesin pin): 36.7158817, 37.1258756
+     Link : https://www.google.com/maps/place/Hükümet+Konağı/@36.7158817,37.1258756,15z/data=!4m5!3m4!1s0x0:0x5e5cb7817b0b66db!8m2!3d36.7158817!4d37.1258756
+
+006. TARİHİ ÇOCUK KÜTÜPHANESİ  [Sayfa 1]
+     Dosya: 006_sayfa1_TARİHİ_ÇOCUK_KÜTÜPHANESİ.png
+     Konum (kesin pin): 36.7172197, 37.1193738
+     (Onceki @-merkez koordinati: 36.7171819, 37.1191434)
+     Link : https://www.google.com/maps/place/TARİHİ+ÇOCUK+KÜTÜPHANESİ/@36.7171819,37.1191434,21z/data=!4m12!1m6!3m5!1s0x152fce1b4b0fdc07:0x256d08895cdbf8c5!2zVEFSxLBIxLAgw4dPQ1VLIEvDnFTDnFBIQU5FU8Sw!8m2!3d36.7172197!4d37.1193738!3m4!1s0x152fce1b4b0fdc07:0x256d08895cdbf8c5!8m2!3d36.7172197!4d37.1193738
+
+007. Kemaliye İlkokulu  [Sayfa 1]
+     Dosya: 007_sayfa1_Kemaliye_İlkokulu.png
+     Konum (kesin pin): 36.716396, 37.11806
+     Link : https://www.google.com/maps/place/Kemaliye+İlkokulu/@36.716396,37.11806,15z/data=!4m5!3m4!1s0x0:0x5f95f4030a6170c9!8m2!3d36.716396!4d37.11806
+
+008. Şeyh Mansur Türbasi  [Sayfa 1]
+     Dosya: 008_sayfa1_Şeyh_Mansur_Türbasi.png
+     Konum (kesin pin): 36.696265, 37.1251839
+     (Onceki @-merkez koordinati: 36.6953683, 37.1234352)
+     Link : https://www.google.com/maps/place/Şeyh+Mansur+Türbasi/@36.6953683,37.1234352,17z/data=!4m12!1m6!3m5!1s0x152fce281f19e7eb:0xf964da8cf959ff2b!2sŞeyh+Muhammet+Mansur+Cami!8m2!3d36.695364!4d37.1256239!3m4!1s0x152fce281c82b0c7:0xfdbb366380f0fec0!8m2!3d36.696265!4d37.1251839
+
+009. Şeyh Efendi Tekkesi  [Sayfa 1]
+     Dosya: 009_sayfa1_Şeyh_Efendi_Tekkesi.png
+     Konum (kesin pin): 36.713842, 37.109613
+     Link : https://www.google.com/maps/place/Şeyh+Efendi+Tekkesi/@36.713842,37.109613,15z/data=!4m12!1m6!3m5!1s0x0:0x54542e0c518ea5bb!2sŞeyh+Efendi+Tekkesi!8m2!3d36.713842!4d37.109613!3m4!1s0x0:0x54542e0c518ea5bb!8m2!3d36.713842!4d37.109613
+
+010. Nurettin, 79000 Kilis Merkez/Kilis  [Sayfa 1]
+     Dosya: 010_sayfa1_Nurettin_79000_Kilis_MerkezKilis.png
+     Konum (kesin pin): 36.7134169, 37.1153042
+     (Onceki @-merkez koordinati: 36.7136549, 37.1154402)
+     Link : https://www.google.com/maps/place/Nurettin,+79000+Kilis+Merkez%2FKilis/@36.7136549,37.1154402,19.21z/data=!4m5!3m4!1s0x152fce19e297708d:0xf36cfa65612f8f24!8m2!3d36.7134169!4d37.1153042
+
+011. Hz Zübeyr ve Hz Talha  [Sayfa 1]
+     Dosya: 011_sayfa1_Hz_Zübeyr_ve_Hz_Talha.png
+     Konum (kesin pin): 36.7142024, 37.1181464
+     (Onceki @-merkez koordinati: 36.7140708, 37.1184523)
+     Link : https://www.google.com/maps/place/Hz+Zübeyr+ve+Hz+Talha/@36.7140708,37.1184523,21z/data=!4m5!3m4!1s0x152fcf7c77dd00c9:0xe778bfe6eef66329!8m2!3d36.7142024!4d37.1181464
+
+012. Canpolat Paşa Cami  [Sayfa 1]
+     Dosya: 012_sayfa1_Canpolat_Paşa_Cami.png
+     Konum (kesin pin): 36.7150453, 37.1143679
+     (Onceki @-merkez koordinati: 36.7153109, 37.1140191)
+     Link : https://www.google.com/maps/place/Canpolat+Paşa+Cami/@36.7153109,37.1140191,20.41z/data=!4m12!1m6!3m5!1s0x0:0x9085a79591b126f3!2sAkbank!8m2!3d36.7153758!4d37.1138741!3m4!1s0x152fcf614cf9dad7:0x217d6a9a30957c84!8m2!3d36.7150453!4d37.1143679
+
+013. İslambey Parkı  [Sayfa 1]
+     Dosya: 013_sayfa1_İslambey_Parkı.png
+     Konum (kesin pin): 36.7142192, 37.1122882
+     Link : https://www.google.com/maps/place/İslambey+Parkı/@36.7142192,37.1122882,15z/data=!4m5!3m4!1s0x0:0xb1720f210f5268d!8m2!3d36.7142192!4d37.1122882
+
+014. Bilal Habeş Cami  [Sayfa 1]
+     Dosya: 014_sayfa1_Bilal_Habeş_Cami.png
+     Konum (kesin pin): 36.7231201, 37.1267221
+     (Onceki @-merkez koordinati: 36.7210088, 37.1263794)
+     Link : https://www.google.com/maps/place/Bilal+Habeş+Cami/@36.7210088,37.1263794,17z/data=!4m8!1m2!2m1!1zQsSwTEFMLcSwIEhBQkXFnsSwIFTDnFJCRVPEsCBraWxpcw!3m4!1s0x0:0x6dba320a88a6c32!8m2!3d36.7231201!4d37.1267221
+
+015. Hakverdi, Akıncı Çk., 79000 Kilis Merkez/Kilis  [Sayfa 1]
+     Dosya: 015_sayfa1_Hakverdi_Akıncı_Çk_79000_Kilis_MerkezKilis.png
+     Konum (kesin pin): 36.718288, 37.11719
+     (Onceki @-merkez koordinati: 36.7184019, 37.1172626)
+     Link : https://www.google.com/maps/place/Hakverdi,+Akıncı+Çk.,+79000+Kilis+Merkez%2FKilis/@36.7184019,37.1172626,20.48z/data=!4m13!1m7!3m6!1s0x152fce052c455597:0x68b94acd2e6619e9!2zSGFrdmVyZGksIEFrxLFuY8SxIMOHay4sIDc5MDAwIEtpbGlzIE1lcmtlei9LaWxpcw!3b1!8m2!3d36.718288!4d37.11719!3m4!1s0x152fce052c455597:0x68b94acd2e6619e9!8m2!3d36.718288!4d37.11719
+
+016. Neşet Efendi Konağı  [Sayfa 1]
+     Dosya: 016_sayfa1_Neşet_Efendi_Konağı.png
+     Konum (kesin pin): 36.7161278, 37.1127485
+     (Onceki @-merkez koordinati: 36.7160962, 37.1136155)
+     Link : https://www.google.com/maps/place/Neşet+Efendi+Konağı/@36.7160962,37.1136155,19.16z/data=!4m8!1m2!2m1!1skilis+müzesi!3m4!1s0x0:0xfcb1fcf9baf72929!8m2!3d36.7161278!4d37.1127485
+
+017. Salih Efendi Sk., Kilis Merkez/Kilis  [Sayfa 1]
+     Dosya: 017_sayfa1_Salih_Efendi_Sk_Kilis_MerkezKilis.png
+     Konum (kesin pin): 36.7181271, 37.1188279
+     (Onceki @-merkez koordinati: 36.7179828, 37.1186234)
+     Link : https://www.google.com/maps/place/Salih+Efendi+Sk.,+Kilis+Merkez%2FKilis/@36.7179828,37.1186234,20.42z/data=!4m5!3m4!1s0x152fce04c62553fb:0x11e399ff3f8fe5c2!8m2!3d36.7181271!4d37.1188279
+
+018. Hakverdi, Haki Efendi Sk., Kilis Merkez/Kilis  [Sayfa 1]
+     Dosya: 018_sayfa1_Hakverdi_Haki_Efendi_Sk_Kilis_MerkezKilis.png
+     Konum (kesin pin): 36.7174464, 37.1173439
+     (Onceki @-merkez koordinati: 36.7173983, 37.1170157)
+     Link : https://www.google.com/maps/place/Hakverdi,+Haki+Efendi+Sk.,+Kilis+Merkez%2FKilis/@36.7173983,37.1170157,21z/data=!4m5!3m4!1s0x152fce1adbc4dfcf:0x96629960fc1fa9d!8m2!3d36.7174464!4d37.1173439
+
+019. Tabakhane Cami  [Sayfa 1]
+     Dosya: 019_sayfa1_Tabakhane_Cami.png
+     Konum (kesin pin): 36.715237, 37.1176699
+     (Onceki @-merkez koordinati: 36.7152413, 37.1154812)
+     Link : https://www.google.com/maps/place/Tabakhane+Cami/@36.7152413,37.1154812,17z/data=!3m1!4b1!4m5!3m4!1s0x152fce1a530bf90d:0xaeac59b976d16572!8m2!3d36.715237!4d37.1176699
+
+020. Kuru kastel Cesme  [Sayfa 1]
+     Dosya: 020_sayfa1_Kuru_kastel_Cesme.png
+     Konum (kesin pin): 36.6952778, 37.0736111
+     (Onceki @-merkez koordinati: 36.695276, 37.0561015)
+     Link : https://www.google.com/maps/place/Kuru+kastel+Cesme/@36.695276,37.0561015,14z/data=!3m1!4b1!4m5!3m4!1s0x152fcf0fbf7a7ac3:0xa1ce9248eb13a8cc!8m2!3d36.6952778!4d37.0736111
+
+021. Küçük Carsi Kasteli Cami  [Sayfa 1]
+     Dosya: 021_sayfa1_Küçük_Carsi_Kasteli_Cami.png
+     Konum (kesin pin): 36.7134327, 37.1128068
+     (Onceki @-merkez koordinati: 36.713459, 37.1125774)
+     Link : https://www.google.com/maps/place/Küçük+Carsi+Kasteli+Cami/@36.713459,37.1125774,21z/data=!4m5!3m4!1s0x152fce171c447fef:0x8bdb8f5f125f8a0d!8m2!3d36.7134327!4d37.1128068
+
+022. İpşir Paşa Kasteli  [Sayfa 1]
+     Dosya: 022_sayfa1_İpşir_Paşa_Kasteli.png
+     Konum (kesin pin): 36.7152318, 37.1214866
+     Link : https://www.google.com/maps/place/İpşir+Paşa+Kasteli/@36.7152318,37.1214866,15z/data=!4m5!3m4!1s0x0:0x85a3d3c463d85845!8m2!3d36.7152318!4d37.1214866
+
+023. Tarihi Hoca Hamamı  [Sayfa 1]
+     Dosya: 023_sayfa1_Tarihi_Hoca_Hamamı.png
+     Konum (kesin pin): 36.7163127, 37.1187143
+     (Onceki @-merkez koordinati: 36.7159465, 37.1180706)
+     Link : https://www.google.com/maps/place/Tarihi+Hoca+Hamamı/@36.7159465,37.1180706,21z/data=!4m5!3m4!1s0x0:0x25db031198971d72!8m2!3d36.7163127!4d37.1187143
+
+024. Karataş Parkı  [Sayfa 1]
+     Dosya: 024_sayfa1_Karataş_Parkı.png
+     Konum (kesin pin): 36.7168137, 37.1249616
+     Link : https://www.google.com/maps/place/Karataş+Parkı/@36.7168137,37.1249616,15z/data=!4m5!3m4!1s0x0:0x8b1e68bd5c3dbe21!8m2!3d36.7168137!4d37.1249616
+
+025. Ashabı Kiram Muhammed Bedevi Hazreti Türbesi  [Sayfa 1]
+     Dosya: 025_sayfa1_Ashabı_Kiram_Muhammed_Bedevi_Hazreti_Türbesi.png
+     Konum (kesin pin): 36.711836, 37.0894535
+     Link : https://www.google.com/maps/place/Ashabı+Kiram+Muhammed+Bedevi+Hazreti+Türbesi/@36.711836,37.0894535,15z/data=!4m5!3m4!1s0x0:0x4f25421c510f1303!8m2!3d36.711836!4d37.0894535
+
+026. Resul Osman Mesire Alanı  [Sayfa 1]
+     Dosya: 026_sayfa1_Resul_Osman_Mesire_Alanı.png
+     Konum (kesin pin): 36.7461798, 37.1126375
+     Link : https://www.google.com/maps/place/Resul+Osman+Mesire+Alanı/@36.7461798,37.1126375,15z/data=!4m5!3m4!1s0x0:0x996007ba030cb69d!8m2!3d36.7461798!4d37.1126375
+
+027. Akpınar Mesire ve Piknik Alanı  [Sayfa 1]
+     Dosya: 027_sayfa1_Akpınar_Mesire_ve_Piknik_Alanı.png
+     Konum (kesin pin): 36.7319946, 37.1563287
+     Link : https://www.google.com/maps/place/Akpınar+Mesire+ve+Piknik+Alanı/@36.7319946,37.1563287,15z/data=!4m5!3m4!1s0x0:0xe4cadf5c3130ffdd!8m2!3d36.7319946!4d37.1563287
+
+028. Ravanda Castle  [Sayfa 2]
+     Dosya: 028_sayfa2_Ravanda_Castle.png
+     Konum (kesin pin): 36.8729765, 37.0540878
+     (Onceki @-merkez koordinati: 36.8729808, 37.0518991)
+     Link : https://www.google.com/maps/place/Ravanda+Castle/@36.8729808,37.0518991,17z/data=!4m12!1m6!3m5!1s0x152e3390f1d06541:0x235dbb2a1f3fe7fc!2sRavanda+Castle!8m2!3d36.8729765!4d37.0540878!3m4!1s0x152e3390f1d06541:0x235dbb2a1f3fe7fc!8m2!3d36.8729765!4d37.0540878
+
+029. Canpolat Paşa Cami  [Sayfa 2]
+     Dosya: 029_sayfa2_Canpolat_Paşa_Cami.png
+     Konum (kesin pin): 36.7150453, 37.1143679
+     (Onceki @-merkez koordinati: 36.7148309, 37.1136573)
+     Link : https://www.google.com/maps/place/Canpolat+Paşa+Cami/@36.7148309,37.1136573,20.02z/data=!4m13!1m7!3m6!1s0x152fce10b6dd14bb:0xcbaa08737a439b65!2sTekye,+Süt+Kastelli+Cd.+No:11,+79000+Kilis+Merkez%2FKilis!3b1!8m2!3d36.715005!4d37.114053!3m4!1s0x152fcf614cf9dad7:0x217d6a9a30957c84!8m2!3d36.7150453!4d37.1143679
+
+030. Kara Kadı Cami  [Sayfa 2]
+     Dosya: 030_sayfa2_Kara_Kadı_Cami.png
+     Konum (kesin pin): 36.7164138, 37.1150981
+     (Onceki @-merkez koordinati: 36.7163652, 37.1162193)
+     Link : https://www.google.com/maps/place/Kara+Kadı+Cami/@36.7163652,37.1162193,17.08z/data=!4m8!1m2!2m1!1skadı+camii!3m4!1s0x0:0xd1f2631eb58631ad!8m2!3d36.7164138!4d37.1150981
+
+031. Hacı Derviş Cami  [Sayfa 2]
+     Dosya: 031_sayfa2_Hacı_Derviş_Cami.png
+     Konum (kesin pin): 36.716488, 37.118023
+     (Onceki @-merkez koordinati: 36.7164923, 37.1158343)
+     Link : https://www.google.com/maps/place/Hacı+Derviş+Cami/@36.7164923,37.1158343,17z/data=!4m12!1m6!3m5!1s0x152fce1b1f01923f:0x5f16bbfe71f63a2b!2zSGFjxLEgRGVydmnFnyBDYW1p!8m2!3d36.716488!4d37.118023!3m4!1s0x152fce1b1f01923f:0x5f16bbfe71f63a2b!8m2!3d36.716488!4d37.118023
+
+032. Oylum Höyük  [Sayfa 2]
+     Dosya: 032_sayfa2_Oylum_Höyük.png
+     Konum (kesin pin): 36.6991866, 37.1785498
+     (Onceki @-merkez koordinati: 36.6970287, 37.1663429)
+     Link : https://www.google.com/maps/place/Oylum+Höyük/@36.6970287,37.1663429,13.99z/data=!4m12!1m6!3m5!1s0x152fd17b391dd463:0xe0e1ee39ecfd0cce!2zT3lsdW0gSMO2ecO8aw!8m2!3d36.6991866!4d37.1785498!3m4!1s0x152fd17b391dd463:0xe0e1ee39ecfd0cce!8m2!3d36.6991866!4d37.1785498
+
+033. Oylum Höyük  [Sayfa 2]
+     Dosya: 033_sayfa2_Oylum_Höyük.png
+     Konum (kesin pin): 36.6991866, 37.1785498
+     (Onceki @-merkez koordinati: 36.6970287, 37.1663429)
+     Link : https://www.google.com/maps/place/Oylum+Höyük/@36.6970287,37.1663429,13.99z/data=!4m12!1m6!3m5!1s0x152fd17b391dd463:0xe0e1ee39ecfd0cce!2zT3lsdW0gSMO2ecO8aw!8m2!3d36.6991866!4d37.1785498!3m4!1s0x152fd17b391dd463:0xe0e1ee39ecfd0cce!8m2!3d36.6991866!4d37.1785498
+
+034. Ravanda Castle  [Sayfa 2]
+     Dosya: 034_sayfa2_Ravanda_Castle.png
+     Konum (kesin pin): 36.8729765, 37.0540878
+     (Onceki @-merkez koordinati: 36.8729808, 37.0518991)
+     Link : https://www.google.com/maps/place/Ravanda+Castle/@36.8729808,37.0518991,17z/data=!4m12!1m6!3m5!1s0x152e3390f1d06541:0x235dbb2a1f3fe7fc!2sRavanda+Castle!8m2!3d36.8729765!4d37.0540878!3m4!1s0x152e3390f1d06541:0x235dbb2a1f3fe7fc!8m2!3d36.8729765!4d37.0540878
+
+035. Hacı Cümbüş Cami  [Sayfa 2]
+     Dosya: 035_sayfa2_Hacı_Cümbüş_Cami.png
+     Konum (kesin pin): 36.715893, 37.1232889
+     (Onceki @-merkez koordinati: 36.7168904, 37.1258365)
+     Link : https://www.google.com/maps/place/Hacı+Cümbüş+Cami/@36.7168904,37.1258365,16.98z/data=!4m12!1m6!3m5!1s0x0:0x86244c609e057bf0!2zSGFjxLEgQ8O8bWLDvMWfIENhbWk!8m2!3d36.715893!4d37.1232889!3m4!1s0x0:0x86244c609e057bf0!8m2!3d36.715893!4d37.1232889
+
+036. Ulu Cami  [Sayfa 2]
+     Dosya: 036_sayfa2_Ulu_Cami.png
+     Konum (kesin pin): 36.7135972, 37.1152785
+     (Onceki @-merkez koordinati: 36.7136015, 37.1130898)
+     Link : https://www.google.com/maps/place/Ulu+Cami/@36.7136015,37.1130898,17z/data=!4m12!1m6!3m5!1s0x152fce17587c7d9d:0x183acea28ac158a3!2sUlu+Cami!8m2!3d36.7135972!4d37.1152785!3m4!1s0x152fce17587c7d9d:0x183acea28ac158a3!8m2!3d36.7135972!4d37.1152785
+
+037. Muallak Cami  [Sayfa 2]
+     Dosya: 037_sayfa2_Muallak_Cami.png
+     Konum (kesin pin): 36.7142767, 37.116498
+     (Onceki @-merkez koordinati: 36.714281, 37.1143093)
+     Link : https://www.google.com/maps/place/Muallak+Cami/@36.714281,37.1143093,17z/data=!4m12!1m6!3m5!1s0x152fce1a22aa4265:0x1b7ab025148abab0!2sMuallak+Cami!8m2!3d36.7142767!4d37.116498!3m4!1s0x152fce1a22aa4265:0x1b7ab025148abab0!8m2!3d36.7142767!4d37.116498
+
+038. Tabakhane Cami  [Sayfa 2]
+     Dosya: 038_sayfa2_Tabakhane_Cami.png
+     Konum (kesin pin): 36.715237, 37.1176699
+     (Onceki @-merkez koordinati: 36.7152413, 37.1154812)
+     Link : https://www.google.com/maps/place/Tabakhane+Cami/@36.7152413,37.1154812,17z/data=!4m12!1m6!3m5!1s0x152fce1a530bf90d:0xaeac59b976d16572!2sTabakhane+Cami!8m2!3d36.715237!4d37.1176699!3m4!1s0x152fce1a530bf90d:0xaeac59b976d16572!8m2!3d36.715237!4d37.1176699
+
+039. Paşa Hamamı  [Sayfa 2]
+     Dosya: 039_sayfa2_Paşa_Hamamı.png
+     Konum (kesin pin): 36.715406, 37.115177
+     (Onceki @-merkez koordinati: 36.7154103, 37.1129883)
+     Link : https://www.google.com/maps/place/Paşa+Hamamı/@36.7154103,37.1129883,17z/data=!4m12!1m6!3m5!1s0x152fce1a748eb631:0x37320bea8e79d87!2zUGHFn2EgSGFtYW3EsQ!8m2!3d36.715406!4d37.115177!3m4!1s0x152fce1a748eb631:0x37320bea8e79d87!8m2!3d36.715406!4d37.115177
+
+040. Duruca Köyü Yolu, 79002 Duruca/Kilis Merkez/Kilis  [Sayfa 2]
+     Dosya: 040_sayfa2_Duruca_Köyü_Yolu_79002_DurucaKilis_MerkezKilis.png
+     Konum (kesin pin): 36.7542638, 37.0314792
+     (Onceki @-merkez koordinati: 36.7541737, 37.0295342)
+     Link : https://www.google.com/maps/place/Duruca+Köyü+Yolu,+79002+Duruca%2FKilis+Merkez%2FKilis/@36.7541737,37.0295342,17z/data=!4m13!1m7!3m6!1s0x152fc956da86a79f:0x9f52dd46d829089e!2sDuruca+Köyü+Yolu,+79002+Duruca%2FKilis+Merkez%2FKilis!3b1!8m2!3d36.7542638!4d37.0314792!3m4!1s0x152fc956da86a79f:0x9f52dd46d829089e!8m2!3d36.7542638!4d37.0314792
+
+041. Eski Hamam  [Sayfa 2]
+     Dosya: 041_sayfa2_Eski_Hamam.png
+     Konum (kesin pin): 36.713589, 37.11941
+     (Onceki @-merkez koordinati: 36.7135933, 37.1172213)
+     Link : https://www.google.com/maps/place/Eski+Hamam/@36.7135933,37.1172213,17z/data=!4m12!1m6!3m5!1s0x152fce1bebc3e0c3:0x1d31b7bc8d484553!2sEski+Hamam!8m2!3d36.713589!4d37.11941!3m4!1s0x152fce1bebc3e0c3:0x1d31b7bc8d484553!8m2!3d36.713589!4d37.11941
+
+042. Tarihi Hoca Hamamı  [Sayfa 2]
+     Dosya: 042_sayfa2_Tarihi_Hoca_Hamamı.png
+     Konum (kesin pin): 36.7163127, 37.1187143
+     (Onceki @-merkez koordinati: 36.716317, 37.1165256)
+     Link : https://www.google.com/maps/place/Tarihi+Hoca+Hamamı/@36.716317,37.1165256,17z/data=!4m12!1m6!3m5!1s0x152fce1b17b48269:0x25db031198971d72!2sTarihi+Hoca+Hamamı!8m2!3d36.7163127!4d37.1187143!3m4!1s0x152fce1b17b48269:0x25db031198971d72!8m2!3d36.7163127!4d37.1187143
+
+043. Cüneyne Cami  [Sayfa 2]
+     Dosya: 043_sayfa2_Cüneyne_Cami.png
+     Konum (kesin pin): 36.714298, 37.1188069
+     (Onceki @-merkez koordinati: 36.7143023, 37.1166182)
+     Link : https://www.google.com/maps/place/Cüneyne+Cami/@36.7143023,37.1166182,17z/data=!4m12!1m6!3m5!1s0x152fce1bb9253663:0x9927359275174b93!2sCüneyne+Cami!8m2!3d36.714298!4d37.1188069!3m4!1s0x152fce1bb9253663:0x9927359275174b93!8m2!3d36.714298!4d37.1188069
+
+044. Akcurun Cami  [Sayfa 2]
+     Dosya: 044_sayfa2_Akcurun_Cami.png
+     Konum (kesin pin): 36.718754, 37.117715
+     (Onceki @-merkez koordinati: 36.7187583, 37.1155263)
+     Link : https://www.google.com/maps/place/Akcurun+Cami/@36.7187583,37.1155263,17z/data=!4m12!1m6!3m5!1s0x152fce05273343d3:0x21f9aaca264515a4!2sAkcurun+Cami!8m2!3d36.718754!4d37.117715!3m4!1s0x152fce05273343d3:0x21f9aaca264515a4!8m2!3d36.718754!4d37.117715
+
+045. Çalık Cami  [Sayfa 2]
+     Dosya: 045_sayfa2_Çalık_Cami.png
+     Konum (kesin pin): 36.717549, 37.118371
+     (Onceki @-merkez koordinati: 36.7175533, 37.1161823)
+     Link : https://www.google.com/maps/place/Çalık+Cami/@36.7175533,37.1161823,17z/data=!4m12!1m6!3m5!1s0x152fce1b2d4f415b:0x190660067cfaad0e!2zw4dhbMSxayBDYW1p!8m2!3d36.717549!4d37.118371!3m4!1s0x152fce1b2d4f415b:0x190660067cfaad0e!8m2!3d36.717549!4d37.118371
+
+046. Akcurun Cd., Kilis Merkez/Kilis  [Sayfa 2]
+     Dosya: 046_sayfa2_Akcurun_Cd_Kilis_MerkezKilis.png
+     Konum (kesin pin): , 
+     Link : https://www.google.com/maps/place/Akcurun+Cd.,+Kilis+Merkez%2FKilis/data=!4m2!3m1!1s0x152fce052bc9c969:0xce23c8abe59fa5dd?sa=X&ved=2ahUKEwijm7yY4IPpAhWOsBQKHSe4Bf0Q8gEwAHoECAoQAQ
+
+047. Kilis Cumhuriyet Meydanı  [Sayfa 2]
+     Dosya: 047_sayfa2_Kilis_Cumhuriyet_Meydanı.png
+     Konum (kesin pin): 36.7162044, 37.1142374
+     Link : https://www.google.com/maps/place/Kilis+Cumhuriyet+Meydanı/@36.7162044,37.1142374,15z/data=!4m5!3m4!1s0x0:0xecf0d540d7d8ba70!8m2!3d36.7162044!4d37.1142374
+
+048. Mercidabık MEYDANI  [Sayfa 2]
+     Dosya: 048_sayfa2_Mercidabık_MEYDANI.png
+     Konum (kesin pin): 36.6940512, 37.2700252
+     Link : https://www.google.com/maps/place/Mercidabık+MEYDANI/@36.6940512,37.2700252,15z/data=!4m5!3m4!1s0x0:0xcfb416208806d4aa!8m2!3d36.6940512!4d37.2700252
+
+049. Mevlevihane Mescidi  [Sayfa 2]
+     Dosya: 049_sayfa2_Mevlevihane_Mescidi.png
+     Konum (kesin pin): 36.715294, 37.1147769
+     (Onceki @-merkez koordinati: 36.7156418, 37.1140923)
+     Link : https://www.google.com/maps/place/Mevlevihane+Mescidi/@36.7156418,37.1140923,20.15z/data=!4m8!1m2!2m1!1zS8SwTMSwUyBNRVZMRVbEsEhBTkVTxLAsIEtpbGlzIE1lcmtlei9LaWxpcw!3m4!1s0x0:0xdb8ac10daf38a898!8m2!3d36.715294!4d37.1147769
+

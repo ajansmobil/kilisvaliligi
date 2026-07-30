@@ -8,11 +8,20 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Kilis Sehir Atlasi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
       :root {
+        /* Resmi mühür arka planı (bg.jpeg) sabit kalır; buton/vurgu renkleri
+           Kilis Gezi Haritası uygulamasıyla aynı zeytin yeşili/krem/altın paletini kullanır. */
         --bg-main: #0f2f96;
-        --bg-button: #0a236f;
+        --bg-button: rgba(81, 87, 74, 0.92);
+        --bg-button-koyu: rgba(61, 66, 56, 0.95);
         --text-main: #ffffff;
+        --renk-krem: #ece6aa;
+        --renk-altin: #c9ab4f;
+        --renk-zeytin-koyu: #3d4238;
       }
 
       * {
@@ -23,7 +32,7 @@
       body {
         margin: 0;
         min-height: 100dvh;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Manrope", Arial, Helvetica, sans-serif;
         background-color: var(--bg-main);
         /* Arka plan gorseli kullanicinin belirttigi bg.jpeg dosyasina baglandi. */
         background-image: url("./bg.jpeg");
@@ -42,41 +51,58 @@
       .app {
         width: min(100%, 420px);
         margin: auto;
-        padding: 18px 22px 28px;
+        padding: max(18px, env(safe-area-inset-top)) max(22px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom))
+          max(22px, env(safe-area-inset-left));
         display: flex;
         flex-direction: column;
         /* Baslik ve menu blogu ekranin tam ortasinda kalir. */
         justify-content: center;
         align-items: center;
-        gap: 14px;
       }
 
-      .brand {
+      /* Basligi ve menuyu tek bir "cam" panelde toplayarak, desenli fon
+         uzerinde daha derli toplu ve premium bir yuzey olusturur. */
+      .panel {
         width: 100%;
-        margin-top: 12px;
         display: flex;
-        justify-content: center;
-      }
-
-      .brand img {
-        width: min(100%, 290px);
-        height: auto;
-        object-fit: contain;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+        padding: 32px 22px 28px;
+        border-radius: 26px;
+        background: rgba(30, 32, 27, 0.38);
+        border: 1px solid rgba(236, 230, 170, 0.16);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(16px) saturate(1.3);
+        -webkit-backdrop-filter: blur(16px) saturate(1.3);
+        animation: girisYukari 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
       }
 
       .title {
-        margin: 0 0 18px;
+        margin: 0;
         text-align: center;
-        font-weight: 700;
+        font-weight: 800;
         letter-spacing: 1.2px;
         line-height: 1.3;
         /* Baslik metni kullanici talebine gore biraz kucultuldu. */
         font-size: 24px;
+        /* Kilis Gezi Haritasi ile aynı krem tonu, sıcak marka bütünlüğü için. */
+        color: var(--renk-krem);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+      }
+
+      /* Baslik altindaki altin cizgi — harita basligindaki altin vurguyla ayni dil */
+      .title::after {
+        content: "";
+        display: block;
+        width: 64px;
+        height: 3px;
+        margin: 14px auto 0;
+        background: var(--renk-altin);
+        border-radius: 2px;
       }
 
       .menu {
-        /* Menu, basliktan sonra sabit boslukla gelmesi icin ust marjin sifirlandi. */
-        margin-top: 0;
         /* Menu blogu ekran ortasina sabit genislikte konumlanir. */
         width: min(100%, 360px);
         display: flex;
@@ -87,28 +113,92 @@
         gap: 10px;
       }
 
-      /* Menu butonlarini referans gorsele benzer sekilde koyu mavi ve oval yapiyoruz. */
+      /* Menu butonlari Kilis Gezi Haritasi ile ayni zeytin yesili kimligini tasir. */
       .menu a {
         /* Butonlar menu blogunun tamamini kaplayarak tam ortada durur. */
         width: 100%;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
         text-decoration: none;
         text-align: center;
         color: var(--text-main);
-        background-color: rgba(10, 35, 111, 0.92);
+        background-color: var(--bg-button);
+        border: 1px solid rgba(201, 171, 79, 0.4);
         border-radius: 14px;
-        padding: 11px 10px;
+        padding: 11px 14px;
         /* 6 menu basligi icin metin boyutu biraz kucultuldu. */
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 500;
-        letter-spacing: 0.8px;
-        transition: transform 0.2s ease, background-color 0.2s ease;
+        letter-spacing: 0.6px;
+        transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        /* Giris animasyonu — butonlar sirayla belirir */
+        opacity: 0;
+        animation: girisYukari 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+      }
+
+      .menu a:nth-child(1) { animation-delay: 0.16s; }
+      .menu a:nth-child(2) { animation-delay: 0.22s; }
+      .menu a:nth-child(3) { animation-delay: 0.28s; }
+      .menu a:nth-child(4) { animation-delay: 0.34s; }
+      .menu a:nth-child(5) { animation-delay: 0.4s; }
+      .menu a:nth-child(6) { animation-delay: 0.46s; }
+
+      .menu a svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        color: var(--renk-altin);
+        transition: color 0.2s ease;
+      }
+
+      .menu-metin {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
 
       .menu a:hover,
       .menu a:focus-visible {
-        background-color: #0d2f93;
+        background-color: var(--bg-button-koyu);
+        border-color: var(--renk-altin);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
         transform: translateY(-1px);
+      }
+
+      .menu a:hover svg,
+      .menu a:focus-visible svg {
+        color: var(--renk-krem);
+      }
+
+      .menu a:active {
+        transform: scale(0.965);
+      }
+
+      .menu a:focus-visible {
+        outline: 2px solid var(--renk-altin);
+        outline-offset: 2px;
+      }
+
+      @keyframes girisYukari {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .panel,
+        .menu a {
+          animation: none !important;
+          opacity: 1 !important;
+          transform: none !important;
+        }
       }
 
       /* Telefon yatay modda acildiginda kullaniciya dik konuma gecmesi gerektigi net mesajla gosterilir. */
@@ -117,8 +207,8 @@
         position: fixed;
         inset: 0;
         z-index: 999;
-        background: rgba(8, 28, 92, 0.97);
-        color: #ffffff;
+        background: rgba(43, 46, 38, 0.97);
+        color: var(--renk-krem);
         font-size: 20px;
         font-weight: 700;
         letter-spacing: 0.8px;
@@ -140,13 +230,24 @@
       }
 
       @media (max-width: 420px) {
+        .panel {
+          padding: 26px 16px 22px;
+          gap: 18px;
+        }
+
         .title {
           font-size: 20px;
         }
 
         .menu a {
-          font-size: 16px;
-          padding: 10px 8px;
+          font-size: 15px;
+          padding: 10px 10px;
+          gap: 10px;
+        }
+
+        .menu a svg {
+          width: 18px;
+          height: 18px;
         }
       }
     </style>
@@ -155,29 +256,68 @@
     <!-- Mobil cihaz yatay konuma gecerse kullaniciya uygulamayi dik kullanma talimati verilir. -->
     <div class="orientation-warning">Lutfen telefonu dik konumda kullanin.</div>
     <main class="app">
-    
+      <div class="panel">
 
-      <!-- Baslik: Kilis Sehir Atlasi ana marka adi olarak gosterilir. -->
-      <section class="title">
-        KİLİS<br />
-        ŞEHİR ATLASI
-      </section>
+        <!-- Baslik: Kilis Sehir Atlasi ana marka adi olarak gosterilir. -->
+        <section class="title">
+          KİLİS<br />
+          ŞEHİR ATLASI
+        </section>
 
-      <!-- Sehir Atlasi ana menusu — kullanici talebine gore 6 bolum halinde duzenlendi. -->
-      <nav class="menu" aria-label="Ana menu">
-        <!-- 1. Kilis genel katalog PDF (turizm rehberi) — tamamlandi. -->
-        <a href="./www.gap.gov.tr_285_SD0L39HF.pdf" target="_blank" rel="noopener noreferrer">KİLİS TURİZM REHBERİ</a>
-        <!-- 2. Tanitim filmi — video dosyasi public klasorune eklendiginde acilir. -->
-        <a href="./kilis-tanitim-filmi.mp4" target="_blank" rel="noopener noreferrer">KİLİS TANITIM FİLMİ</a>
-        <!-- 3. Turizm haritasi belgesi — indirilebilir PDF olarak sunulur. -->
-        <a href="./a2.pdf" download="kilis-turizm-haritasi.pdf">KİLİS TURİZM HARİTASI</a>
-        <!-- 4. Kilis kultur kutuphanesi — kitap PDF'leri ileride bu sayfaya eklenecek. -->
-        <a href="./kutuphane/">KİLİS KÜLTÜR KÜTÜPHANESİ</a>
-        <!-- 5. Destinasyon haritasi — oren ve tarihi yerlerin interaktif harita uygulamasi. -->
-        <a href="./map/">DESTİNASYON HARİTASI</a>
-        <!-- 6. Resmi Kilis Valiligi web sitesine yonlendirme. -->
-        <a href="https://www.kilis.gov.tr/" target="_blank" rel="noopener noreferrer">KİLİS VALİLİĞİ</a>
-      </nav>
+        <!-- Sehir Atlasi ana menusu — kullanici talebine gore 6 bolum halinde duzenlendi. -->
+        <nav class="menu" aria-label="Ana menu">
+          <!-- 1. Kilis genel katalog PDF (turizm rehberi) — artik kitap gibi cevrilerek okunuyor. -->
+          <a href="./kitap-oku/?dosya=../www.gap.gov.tr_285_SD0L39HF.pdf&amp;baslik=Kilis%20Turizm%20Rehberi" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 5.5C4 4.67 4.67 4 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5v-13Z" />
+              <path d="M20 5.5c0-.83-.67-1.5-1.5-1.5H13v16h5.5c.83 0 1.5-.67 1.5-1.5v-13Z" />
+            </svg>
+            <span class="menu-metin">KİLİS TURİZM REHBERİ</span>
+          </a>
+          <!-- 2. Tanitim filmi — video dosyasi public klasorune eklendiginde acilir. -->
+          <a href="./kilis-tanitim-filmi.mp4" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M10 8.5v7l6-3.5-6-3.5Z" fill="currentColor" stroke="none" />
+            </svg>
+            <span class="menu-metin">KİLİS TANITIM FİLMİ</span>
+          </a>
+          <!-- 3. Turizm haritasi belgesi — artik kitap gibi cevrilerek okunuyor, ham indirme goruntuleyici icinde sunuluyor. -->
+          <a href="./kitap-oku/?dosya=../a2.pdf&amp;baslik=Kilis%20Turizm%20Haritası" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2-6-2Z" />
+              <path d="M9 4v14M15 6v14" />
+            </svg>
+            <span class="menu-metin">KİLİS TURİZM HARİTASI</span>
+          </a>
+          <!-- 4. Kilis kultur kutuphanesi — kitap PDF'leri ileride bu sayfaya eklenecek. -->
+          <a href="./kutuphane/">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 20V6a1 1 0 0 1 1-1h2v15" />
+              <path d="M9 20V4h4v16" />
+              <path d="M15 20V7h4a1 1 0 0 1 1 1v12" />
+            </svg>
+            <span class="menu-metin">KİLİS KÜLTÜR KÜTÜPHANESİ</span>
+          </a>
+          <!-- 5. Destinasyon haritasi — oren ve tarihi yerlerin interaktif harita uygulamasi. -->
+          <a href="./map/">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" />
+              <circle cx="12" cy="9.5" r="2.4" />
+            </svg>
+            <span class="menu-metin">DESTİNASYON HARİTASI</span>
+          </a>
+          <!-- 6. Resmi Kilis Valiligi web sitesine yonlendirme. -->
+          <a href="https://www.kilis.gov.tr/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 21h18" />
+              <path d="M4 21V10l8-5 8 5v11" />
+              <path d="M9 21v-6h6v6" />
+            </svg>
+            <span class="menu-metin">KİLİS VALİLİĞİ</span>
+          </a>
+        </nav>
+      </div>
     </main>
 
     <script>

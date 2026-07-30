@@ -1,24 +1,64 @@
 /**
  * Kilis Gezi Haritası — Ana stil dosyası
- * Tam ekran harita + soldan açılan yan menü tasarımı
+ * Tam ekran harita + soldan açılan (mobilde alttan açılan) menü tasarımı
+ * Renk paleti: logo.svg'nin zeytin yeşili/krem kimliği + kilis_gezi_haritasi_2026.pdf'deki
+ * kategori kartı renklerinden (cami=yeşil, türbe=lacivert, konak=toprak, mesire/baraj=mavi-yeşil,
+ * el sanatı/yemek=altın) esinlenen kategori vurgu renkleri.
  */
 
-/* ── CSS Değişkenleri (logo.svg renk paleti) ── */
+/* ── CSS Değişkenleri ── */
 :root {
+  /* Marka çekirdek renkleri */
   --renk-birincil: #51574a;
   --renk-birincil-koyu: #3d4238;
+  --renk-birincil-acik: #6b7660;
   --renk-vurgu: #ece6aa;
-  --renk-vurgu-koyu: #d9d28e;
+  --renk-vurgu-koyu: #c9ab4f;
   --renk-ikincil: #53574a;
   --renk-arka: #f9f7ef;
   --renk-beyaz: #ffffff;
   --renk-gri: #6b7064;
   --renk-gri-acik: #e8e4d0;
-  --renk-golge: rgba(81, 87, 74, 0.18);
-  --menu-genislik: 360px;
+  --renk-golge: rgba(61, 66, 56, 0.16);
+  --renk-golge-yumusak: rgba(61, 66, 56, 0.1);
+
+  /* Kategori renkleri — PDF'deki kart renklerinden esinlenilmiştir */
+  --cat-tarihi: #8e5327;
+  --cat-tarihi-acik: #f3e2d3;
+  --cat-dini: #3c6b52;
+  --cat-dini-acik: #dbe9e0;
+  --cat-doga: #276b76;
+  --cat-doga-acik: #d7e7e9;
+  --cat-kultur: #815d1d;
+  --cat-kultur-acik: #f4e7cb;
+  --cat-arkeoloji: #55628c;
+  --cat-arkeoloji-acik: #e0e2ef;
+
+  --menu-genislik: 380px;
   --header-yukseklik: 60px;
+  --guvenli-ust: env(safe-area-inset-top, 0px);
+  --guvenli-alt: env(safe-area-inset-bottom, 0px);
+  --guvenli-sol: env(safe-area-inset-left, 0px);
+  --guvenli-sag: env(safe-area-inset-right, 0px);
+  --header-toplam: calc(var(--header-yukseklik) + var(--guvenli-ust));
+
+  --radius-kart: 14px;
+  --radius-sheet: 22px;
+  --golge-1: 0 2px 10px var(--renk-golge-yumusak);
+  --golge-2: 0 8px 24px var(--renk-golge);
+  --golge-3: 0 -10px 30px rgba(61, 66, 56, 0.2);
+
   --gecis: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --gecis-yay: 0.4s cubic-bezier(0.34, 1.15, 0.64, 1);
+  --font: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* ── Sıfırlama ── */
@@ -37,6 +77,8 @@ body {
   font-family: var(--font);
   color: var(--renk-ikincil);
   background: var(--renk-arka);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
 }
 
 /* ── Üst Başlık Çubuğu ── */
@@ -45,14 +87,17 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: var(--header-yukseklik);
-  background: linear-gradient(135deg, var(--renk-birincil) 0%, var(--renk-ikincil) 100%);
+  height: var(--header-toplam);
+  padding-top: var(--guvenli-ust);
+  padding-left: calc(14px + var(--guvenli-sol));
+  padding-right: calc(14px + var(--guvenli-sag));
+  background: linear-gradient(135deg, var(--renk-birincil) 0%, var(--renk-birincil-koyu) 100%);
   color: var(--renk-vurgu);
   display: flex;
   align-items: center;
-  padding: 0 16px;
   z-index: 1000;
-  box-shadow: 0 2px 10px var(--renk-golge);
+  box-shadow: var(--golge-2);
+  border-bottom: 2px solid rgba(201, 171, 79, 0.55);
 }
 
 /* Menü aç/kapa butonu */
@@ -61,12 +106,14 @@ body {
   border: none;
   color: var(--renk-vurgu);
   cursor: pointer;
-  padding: 8px;
-  border-radius: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background var(--gecis);
+  flex-shrink: 0;
 }
 
 .menu-toggle:hover {
@@ -74,37 +121,53 @@ body {
 }
 
 .menu-toggle svg {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
+}
+
+.header-logo {
+  height: 32px;
+  width: auto;
+  margin-left: 8px;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+  flex-shrink: 0;
 }
 
 .header-title {
-  margin-left: 12px;
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: 0.3px;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .header-subtitle {
   margin-left: auto;
+  padding-left: 12px;
   font-size: 0.85rem;
+  font-weight: 500;
   opacity: 0.85;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-/* ── Yan Menü ── */
+/* ── Yan Menü / Mobilde Alttan Açılan Panel ── */
 .sidebar {
   position: fixed;
-  top: var(--header-yukseklik);
+  top: var(--header-toplam);
   left: 0;
   width: var(--menu-genislik);
-  height: calc(100% - var(--header-yukseklik));
+  height: calc(100% - var(--header-toplam));
   background: var(--renk-arka);
   z-index: 900;
   transform: translateX(-100%);
-  transition: transform var(--gecis);
+  transition: transform var(--gecis-yay);
   display: flex;
   flex-direction: column;
-  box-shadow: 4px 0 16px var(--renk-golge);
+  box-shadow: var(--golge-2);
+  border-radius: 0 var(--radius-sheet) var(--radius-sheet) 0;
 }
 
 /* Menü açık durumu */
@@ -112,12 +175,18 @@ body {
   transform: translateX(0);
 }
 
-/* Menü arka plan karartması (mobil) */
+/* Mobil sürükleme tutamacı — masaüstünde gizli */
+.sidebar-handle {
+  display: none;
+}
+
+/* Menü arka plan karartması (mobil + masaüstü) */
 .sidebar-overlay {
   position: fixed;
   inset: 0;
-  top: var(--header-yukseklik);
-  background: rgba(0, 0, 0, 0.4);
+  top: var(--header-toplam);
+  background: rgba(30, 32, 27, 0.45);
+  backdrop-filter: blur(1px);
   z-index: 850;
   opacity: 0;
   visibility: hidden;
@@ -131,13 +200,17 @@ body {
 
 /* Menü başlık alanı */
 .sidebar-header {
-  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px 14px;
   border-bottom: 1px solid var(--renk-gri-acik);
 }
 
 .sidebar-header h2 {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.15rem;
+  font-weight: 800;
   color: var(--renk-ikincil);
 }
 
@@ -147,59 +220,127 @@ body {
   margin-top: 4px;
 }
 
+/* Mobil kapatma butonu — masaüstünde gizli */
+.sidebar-kapat {
+  display: none;
+  background: var(--renk-gri-acik);
+  border: none;
+  color: var(--renk-ikincil);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background var(--gecis);
+}
+
+.sidebar-kapat:hover {
+  background: var(--cat-tarihi-acik);
+  color: var(--cat-tarihi);
+}
+
+.sidebar-kapat svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* Kategori filtre butonları */
 .kategori-filtreler {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  padding: 12px 16px;
+  gap: 8px;
+  padding: 14px 16px;
   border-bottom: 1px solid var(--renk-gri-acik);
+  background: linear-gradient(180deg, rgba(236, 230, 170, 0.25), transparent);
 }
 
 .kategori-btn {
-  padding: 5px 12px;
-  border: 1px solid var(--renk-gri-acik);
+  padding: 7px 14px;
+  border: 1.5px solid var(--renk-gri-acik);
   border-radius: 20px;
   background: var(--renk-beyaz);
   color: var(--renk-gri);
-  font-size: 0.75rem;
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 0.78rem;
   cursor: pointer;
   transition: all var(--gecis);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
 }
 
-.kategori-btn:hover,
+.kategori-btn:hover {
+  border-color: var(--renk-birincil-acik);
+  color: var(--renk-birincil-koyu);
+}
+
 .kategori-btn.aktif {
   background: var(--renk-birincil);
   color: var(--renk-vurgu);
   border-color: var(--renk-birincil);
+  box-shadow: var(--golge-1);
 }
+
+/* Kategoriye özgü simgeler — harita lejantındaki ikonlardan esinlenilmiştir */
+.kategori-btn[data-kategori="tumu"]::before { content: "📍"; }
+.kategori-btn[data-kategori="tarihi"]::before { content: "🏛️"; }
+.kategori-btn[data-kategori="dini"]::before { content: "🕌"; }
+.kategori-btn[data-kategori="doga"]::before { content: "🌳"; }
+.kategori-btn[data-kategori="kultur"]::before { content: "🎨"; }
+.kategori-btn[data-kategori="arkeoloji"]::before { content: "🏺"; }
+
+/* Kategoriye özgü aktif renkler */
+.kategori-btn[data-kategori="tarihi"].aktif { background: var(--cat-tarihi); border-color: var(--cat-tarihi); color: #fff; }
+.kategori-btn[data-kategori="dini"].aktif { background: var(--cat-dini); border-color: var(--cat-dini); color: #fff; }
+.kategori-btn[data-kategori="doga"].aktif { background: var(--cat-doga); border-color: var(--cat-doga); color: #fff; }
+.kategori-btn[data-kategori="kultur"].aktif { background: var(--cat-kultur); border-color: var(--cat-kultur); color: #fff; }
+.kategori-btn[data-kategori="arkeoloji"].aktif { background: var(--cat-arkeoloji); border-color: var(--cat-arkeoloji); color: #fff; }
 
 /* Konum listesi kaydırma alanı */
 .konum-listesi {
   flex: 1;
   overflow-y: auto;
-  padding: 8px 0;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  padding: 6px 0 12px;
 }
 
 /* Tek konum kartı — görsel üstte, isim görselin altında */
 .konum-karti {
   display: flex;
   flex-direction: column;
-  padding: 12px 16px;
+  margin: 6px 10px;
+  padding: 8px;
   cursor: pointer;
-  transition: background var(--gecis);
-  border-left: 3px solid transparent;
+  border-radius: var(--radius-kart);
+  border: 1px solid transparent;
+  border-left: 4px solid var(--renk-gri-acik);
+  transition: background var(--gecis), box-shadow var(--gecis), transform var(--gecis);
 }
 
 .konum-karti:hover {
-  background: var(--renk-arka);
+  background: var(--renk-beyaz);
+  box-shadow: var(--golge-1);
+  transform: translateY(-1px);
 }
 
 /* Seçili konum vurgusu */
 .konum-karti.secili {
-  background: #f3efd8;
-  border-left-color: var(--renk-birincil);
+  background: var(--renk-beyaz);
+  box-shadow: var(--golge-2);
+  border-color: var(--renk-vurgu-koyu);
 }
+
+/* Kategoriye göre sol kenar rengi */
+.konum-karti:has(.etiket-tarihi) { border-left-color: var(--cat-tarihi); }
+.konum-karti:has(.etiket-dini) { border-left-color: var(--cat-dini); }
+.konum-karti:has(.etiket-doga) { border-left-color: var(--cat-doga); }
+.konum-karti:has(.etiket-kultur) { border-left-color: var(--cat-kultur); }
+.konum-karti:has(.etiket-arkeoloji) { border-left-color: var(--cat-arkeoloji); }
 
 /* Görsel ve altındaki yer adı */
 .konum-gorsel-wrap {
@@ -218,26 +359,60 @@ body {
   background: var(--renk-gri-acik);
 }
 
-/* Yer adı — görselin hemen altında */
+/* Kategori rozeti — görselin köşesinde, PDF kartlarındaki ikonlardan esinlenilmiştir */
+.konum-karti:has(.etiket-tarihi) .konum-gorsel-wrap::after,
+.konum-karti:has(.etiket-dini) .konum-gorsel-wrap::after,
+.konum-karti:has(.etiket-doga) .konum-gorsel-wrap::after,
+.konum-karti:has(.etiket-kultur) .konum-gorsel-wrap::after,
+.konum-karti:has(.etiket-arkeoloji) .konum-gorsel-wrap::after {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.konum-karti:has(.etiket-tarihi) .konum-gorsel-wrap::after { content: "🏛"; background: var(--cat-tarihi); }
+.konum-karti:has(.etiket-dini) .konum-gorsel-wrap::after { content: "🕌"; background: var(--cat-dini); }
+.konum-karti:has(.etiket-doga) .konum-gorsel-wrap::after { content: "🌳"; background: var(--cat-doga); }
+.konum-karti:has(.etiket-kultur) .konum-gorsel-wrap::after { content: "🎨"; background: var(--cat-kultur); }
+.konum-karti:has(.etiket-arkeoloji) .konum-gorsel-wrap::after { content: "🏺"; background: var(--cat-arkeoloji); }
+
+/* Yer adı — görselin hemen altında, kategoriye göre renklenir */
 .konum-gorsel-isim {
   display: block;
   width: 100%;
   padding: 8px 10px;
   background: var(--renk-birincil);
-  color: var(--renk-vurgu);
+  color: #fff;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   line-height: 1.3;
 }
 
+.konum-karti:has(.etiket-tarihi) .konum-gorsel-isim { background: var(--cat-tarihi); }
+.konum-karti:has(.etiket-dini) .konum-gorsel-isim { background: var(--cat-dini); }
+.konum-karti:has(.etiket-doga) .konum-gorsel-isim { background: var(--cat-doga); }
+.konum-karti:has(.etiket-kultur) .konum-gorsel-isim { background: var(--cat-kultur); }
+.konum-karti:has(.etiket-arkeoloji) .konum-gorsel-isim { background: var(--cat-arkeoloji); }
+
 .konum-bilgi {
   flex: 1;
   min-width: 0;
+  padding: 2px 6px 4px;
 }
 
 .konum-bilgi p {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
   color: var(--renk-gri);
   margin-top: 0;
   display: -webkit-box;
@@ -248,26 +423,26 @@ body {
 
 .konum-etiket {
   display: inline-block;
-  margin-top: 6px;
-  padding: 2px 8px;
-  border-radius: 10px;
+  margin-top: 8px;
+  padding: 3px 10px;
+  border-radius: 12px;
   font-size: 0.68rem;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
-/* Kategori renkleri — logo paletine uyumlu */
-.etiket-tarihi { background: #f0ebd0; color: #51574a; }
-.etiket-arkeoloji { background: #e4ead6; color: #4a5c40; }
-.etiket-dini { background: #ece6aa; color: #3d4238; }
-.etiket-kultur { background: #e0dbc0; color: #53574a; }
-.etiket-doga { background: #d8e6cc; color: #3f5238; }
+/* Kategori rozet renkleri — PDF kart renklerine sadık */
+.etiket-tarihi { background: var(--cat-tarihi-acik); color: var(--cat-tarihi); }
+.etiket-arkeoloji { background: var(--cat-arkeoloji-acik); color: var(--cat-arkeoloji); }
+.etiket-dini { background: var(--cat-dini-acik); color: var(--cat-dini); }
+.etiket-kultur { background: var(--cat-kultur-acik); color: var(--cat-kultur); }
+.etiket-doga { background: var(--cat-doga-acik); color: var(--cat-doga); }
 
 /* ── Harita Alanı ── */
 .harita-kapsayici {
   position: fixed;
-  top: var(--header-yukseklik);
+  top: var(--header-toplam);
   left: 0;
   right: 0;
   bottom: 0;
@@ -285,8 +460,19 @@ body {
 }
 
 /* ── Google Maps InfoWindow Özel Stili ── */
+.gm-style .gm-style-iw-c {
+  padding: 0 !important;
+  border-radius: 14px !important;
+  box-shadow: var(--golge-2) !important;
+}
+
+.gm-style .gm-style-iw-d {
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+
 .info-pencere {
-  max-width: 280px;
+  max-width: min(300px, 80vw);
   font-family: var(--font);
 }
 
@@ -294,24 +480,24 @@ body {
   width: 100%;
   height: 140px;
   object-fit: cover;
-  border-radius: 8px 8px 0 0;
+  display: block;
 }
 
 .info-pencere-icerik {
-  padding: 12px;
+  padding: 14px;
 }
 
 .info-pencere-icerik h3 {
   font-size: 1rem;
-  font-weight: 600;
-  color: var(--renk-ikincil);
+  font-weight: 800;
+  color: var(--renk-birincil-koyu);
   margin-bottom: 6px;
 }
 
 .info-pencere-icerik p {
   font-size: 0.82rem;
   color: var(--renk-gri);
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 /* ── Açılış Logo Animasyonu ── */
@@ -322,7 +508,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(160deg, #f9f7ef 0%, #ece6aa 45%, #f5f2e4 100%);
+  background: linear-gradient(160deg, var(--renk-arka) 0%, var(--renk-vurgu) 45%, var(--renk-arka) 100%);
   opacity: 1;
   transition: opacity 0.6s ease, visibility 0.6s ease;
 }
@@ -407,7 +593,14 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* ── Responsive (Mobil) ── */
+/* ── Responsive (Tablet ve Mobil) ── */
+@media (max-width: 900px) {
+  :root {
+    --menu-genislik: 340px;
+  }
+}
+
+/* ── Responsive (Mobil — sidebar alttan açılan panele dönüşür) ── */
 @media (max-width: 768px) {
   :root {
     --menu-genislik: 100%;
@@ -417,8 +610,72 @@ body {
     display: none;
   }
 
-  /* Mobilde harita kaymaz, overlay kullanılır */
+  .header-logo {
+    display: none;
+  }
+
+  /* Mobilde harita kaymaz, overlay + alttan açılan panel kullanılır */
   .harita-kapsayici.menu-acik {
     left: 0;
+  }
+
+  .sidebar {
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    border-radius: var(--radius-sheet) var(--radius-sheet) 0 0;
+    box-shadow: var(--golge-3);
+    transform: translateY(100%);
+    padding-bottom: var(--guvenli-alt);
+
+    height: 78vh;
+    height: min(78dvh, 620px);
+    max-height: calc(100vh - var(--header-toplam) - 16px);
+    max-height: calc(100dvh - var(--header-toplam) - 16px);
+  }
+
+  .sidebar.acik {
+    transform: translateY(0);
+  }
+
+  .sidebar-handle {
+    display: block;
+    width: 42px;
+    height: 5px;
+    border-radius: 3px;
+    background: var(--renk-gri-acik);
+    margin: 10px auto 0;
+    flex-shrink: 0;
+  }
+
+  .sidebar-kapat {
+    display: flex;
+  }
+
+  .kategori-filtreler {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .kategori-filtreler::-webkit-scrollbar {
+    display: none;
+  }
+
+  .kategori-btn {
+    flex-shrink: 0;
+  }
+
+  .konum-gorsel-wrap img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 380px) {
+  .header-title {
+    font-size: 1.05rem;
   }
 }

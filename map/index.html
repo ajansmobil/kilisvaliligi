@@ -4,7 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Kilis Gezi Haritası — Tarihi ve turistik noktaları keşfedin">
+  <meta name="theme-color" content="#3d4238">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
   <title>Kilis Gezi Haritası</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -22,7 +29,7 @@
 
   <!-- Üst başlık çubuğu -->
   <header class="header">
-    <button id="menu-toggle" class="menu-toggle" aria-label="Menüyü aç/kapat">
+    <button id="menu-toggle" class="menu-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="sidebar">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
            stroke-linecap="round" stroke-linejoin="round">
         <line x1="3" y1="6" x2="21" y2="6"/>
@@ -30,15 +37,26 @@
         <line x1="3" y1="18" x2="21" y2="18"/>
       </svg>
     </button>
+    <img src="assets/logo.svg" alt="" class="header-logo" aria-hidden="true">
     <h1 class="header-title">Kilis Gezi Haritası</h1>
     <span class="header-subtitle">Keşfet · Gez · Öğren</span>
   </header>
 
-  <!-- Soldan açılan yan menü -->
-  <aside id="sidebar" class="sidebar">
+  <!-- Soldan açılan / mobilde alttan açılan yan menü -->
+  <aside id="sidebar" class="sidebar" aria-hidden="true">
+    <div class="sidebar-handle" aria-hidden="true"></div>
     <div class="sidebar-header">
-      <h2>Gezi Noktaları</h2>
-      <p>Kilis'in tarihi ve turistik yerlerini keşfedin</p>
+      <div class="sidebar-header-metin">
+        <h2>Gezi Noktaları</h2>
+        <p>Kilis'in tarihi ve turistik yerlerini keşfedin</p>
+      </div>
+      <button id="sidebar-kapat" class="sidebar-kapat" aria-label="Menüyü kapat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
     </div>
 
     <!-- Kategori filtre butonları -->

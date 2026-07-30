@@ -9,9 +9,16 @@ const Menu = (function () {
   let overlayEl = null;
   let listeEl = null;
   let haritaKapsayiciEl = null;
+  let menuToggleEl = null;
   let menuAcik = false;
   let seciliKonumId = null;
   let aktifKategori = "tumu";
+
+  /** Mobil sürükleyerek kapatma durumu */
+  let surukleBaslangicY = null;
+  let surukleFarki = 0;
+  let surukleniyor = false;
+  const SURUKLE_KAPATMA_ESIGI = 90;
 
   /** Kategori etiket Türkçe karşılıkları */
   const KATEGORI_ETIKETLERI = {
@@ -45,12 +52,75 @@ const Menu = (function () {
     overlayEl = document.getElementById("sidebar-overlay");
     listeEl = document.getElementById("konum-listesi");
     haritaKapsayiciEl = document.getElementById("harita-kapsayici");
+    menuToggleEl = document.getElementById("menu-toggle");
 
-    document.getElementById("menu-toggle").addEventListener("click", menuToggle);
+    menuToggleEl.addEventListener("click", menuToggle);
     overlayEl.addEventListener("click", menuKapat);
+    document.getElementById("sidebar-kapat").addEventListener("click", menuKapat);
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && menuAcik) {
+        menuKapat();
+      }
+    });
 
+    surukleyerekKapatmayiBagla();
     kategoriButonlariniOlustur();
     konumListesiniOlustur(siralaKonumlar(LOCATIONS));
+  }
+
+  /**
+   * Mobilde panelin tutamacından ve başlığından aşağı sürükleyerek
+   * kapatılabilmesini sağlayan dokunma olaylarını bağlar
+   */
+  function surukleyerekKapatmayiBagla() {
+    const surukleAlanlari = [
+      document.querySelector(".sidebar-handle"),
+      document.querySelector(".sidebar-header"),
+    ].filter(Boolean);
+
+    surukleAlanlari.forEach((el) => {
+      el.addEventListener("touchstart", surukleBaslat, { passive: true });
+      el.addEventListener("touchmove", surukleDevam, { passive: false });
+      el.addEventListener("touchend", surukleBitir);
+      el.addEventListener("touchcancel", surukleBitir);
+    });
+  }
+
+  function surukleBaslat(e) {
+    if (window.innerWidth > 768) {
+      return;
+    }
+    surukleBaslangicY = e.touches[0].clientY;
+    surukleniyor = true;
+    sidebarEl.style.transition = "none";
+  }
+
+  function surukleDevam(e) {
+    if (!surukleniyor || surukleBaslangicY === null) {
+      return;
+    }
+    const fark = e.touches[0].clientY - surukleBaslangicY;
+    if (fark > 0) {
+      surukleFarki = fark;
+      sidebarEl.style.transform = `translateY(${fark}px)`;
+      e.preventDefault();
+    }
+  }
+
+  function surukleBitir() {
+    if (!surukleniyor) {
+      return;
+    }
+    surukleniyor = false;
+    sidebarEl.style.transition = "";
+    sidebarEl.style.transform = "";
+
+    if (surukleFarki > SURUKLE_KAPATMA_ESIGI) {
+      menuKapat();
+    }
+
+    surukleFarki = 0;
+    surukleBaslangicY = null;
   }
 
   /**
@@ -68,6 +138,8 @@ const Menu = (function () {
     sidebarEl.classList.add("acik");
     overlayEl.classList.add("gorunur");
     haritaKapsayiciEl.classList.add("menu-acik");
+    sidebarEl.setAttribute("aria-hidden", "false");
+    menuToggleEl.setAttribute("aria-expanded", "true");
   }
 
   /**
@@ -78,6 +150,8 @@ const Menu = (function () {
     sidebarEl.classList.remove("acik");
     overlayEl.classList.remove("gorunur");
     haritaKapsayiciEl.classList.remove("menu-acik");
+    sidebarEl.setAttribute("aria-hidden", "true");
+    menuToggleEl.setAttribute("aria-expanded", "false");
   }
 
   /**
@@ -164,6 +238,11 @@ const Menu = (function () {
       k.classList.toggle("secili", k.dataset.id === konum.id);
     });
     Harita.konumaGit(konum);
+
+    /* Mobilde alttan açılan panel haritayı kapattığından, konum seçilince kapatılır */
+    if (window.innerWidth <= 768) {
+      menuKapat();
+    }
   }
 
   /**
@@ -186,5 +265,6 @@ const Menu = (function () {
     baslat,
     konumVurgula,
     menuAc,
+    kategoriEtiketleri: KATEGORI_ETIKETLERI,
   };
 })();
