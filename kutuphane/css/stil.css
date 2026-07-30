@@ -28,6 +28,13 @@
   padding: 0;
 }
 
+/* `hidden` özniteliği her zaman kazanır — aşağıdaki bileşen kurallarının
+   display:flex değerleri tarafından ezilmemesi için (ör. #raf-alani dolap
+   açılmadan önce görünür kalmamalı). */
+[hidden] {
+  display: none !important;
+}
+
 html,
 body {
   height: 100%;

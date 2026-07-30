@@ -95,7 +95,9 @@
   }
 
   function raflariOlustur() {
-    const kitaplar = window.KITAPLAR || [];
+    /* NOT: KITAPLAR, data/kitaplar.js icinde `const` ile tanimlandigindan
+       window.KITAPLAR degil, dogrudan bare identifier olarak erisilir. */
+    const kitaplar = typeof KITAPLAR !== "undefined" ? KITAPLAR : [];
     for (let i = 0; i < kitaplar.length; i += KITAP_BASINA_RAF) {
       const grup = kitaplar.slice(i, i + KITAP_BASINA_RAF);
       rafListeEl.appendChild(rafiOlustur(grup));

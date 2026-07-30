@@ -70,6 +70,12 @@
   padding: 0;
 }
 
+/* `hidden` özniteliği her zaman kazanır — ileride eklenecek bileşenlerin
+   display değerleri tarafından sessizce ezilmesin diye güvence altına alınır. */
+[hidden] {
+  display: none !important;
+}
+
 html,
 body {
   height: 100%;
