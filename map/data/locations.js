@@ -2,7 +2,7 @@
  * Kilis Gezi Haritası — Konum verileri (UTF-8)
  * kilis_gezi_haritasi_2026.pdf'deki 48 gerçek yer kartından türetilmiştir
  * (PDF'in kendi başlık fontuyla -HelveticaNeueLTPro-BdCn 7pt- tespit edilen kartlar).
- * Görseller: assets/yerler/{id}/index.jpg, PDF metinleri: assets/yerler/{id}/bilgi.txt
+ * Görseller: assets/yerler/{id}/kart.jpg, PDF metinleri: assets/yerler/{id}/bilgi.txt
  */
 const LOCATIONS = [
   {
@@ -11,7 +11,7 @@ const LOCATIONS = [
     description: "Söğütlüdere, kamelya ağaçları arasında göl manzarasıyla kısa bir mola verebileceğiniz; restoranları, oyun parkları ve piknik alanlarıyla dinlenebileceğiniz bir mesire alanıdır.",
     lat: 36.7049918,
     lng: 37.1702188,
-    image: "assets/yerler/sogutludere/index.jpg",
+    image: "assets/yerler/sogutludere/kart.jpg",
     category: "doga",
   },
   {
@@ -20,7 +20,7 @@ const LOCATIONS = [
     description: "Oltasıyla balık tutan kişilere rastlayabileceğiniz Seve Barajı ve çevresi, özellikle yaz ve bahar aylarında ziyaretçi akınına uğrar.",
     lat: 36.736111,
     lng: 37.241944,
-    image: "assets/yerler/seve-baraji/index.jpg",
+    image: "assets/yerler/seve-baraji/kart.jpg",
     category: "doga",
   },
   {
@@ -29,7 +29,7 @@ const LOCATIONS = [
     description: "Peygamber Efendimiz ile birlikte savaşmış, Habeşistan'a hicret edenler arasında yer almış Şurahbil Bin Hasene Hazretleri'ne ait türbe ve camidir.",
     lat: 36.722537,
     lng: 37.1225941,
-    image: "assets/yerler/surahbil-turbesi/index.jpg",
+    image: "assets/yerler/surahbil-turbesi/kart.jpg",
     category: "dini",
   },
   {
@@ -39,7 +39,7 @@ const LOCATIONS = [
     // yaklaşık: bu yerin kendi QR'ı yok, PDF metnindeki komşu referans noktasından türetildi
     lat: 36.7158817,
     lng: 37.1258756,
-    image: "assets/yerler/caglasyan-konagi/index.jpg",
+    image: "assets/yerler/caglasyan-konagi/kart.jpg",
     category: "tarihi",
   },
   {
@@ -48,7 +48,7 @@ const LOCATIONS = [
     description: "1924 yılında Kilis Kaymakamı Talat Bey tarafından inşasına başlanan, 1925'te tamamlanan Kilis Tarihi Hükümet Konağı şehrin tam merkezindedir; 2015'ten beri Valilik Binası olarak kullanılmaktadır.",
     lat: 36.7158817,
     lng: 37.1258756,
-    image: "assets/yerler/hukumet-konagi/index.jpg",
+    image: "assets/yerler/hukumet-konagi/kart.jpg",
     category: "tarihi",
   },
   {
@@ -57,7 +57,7 @@ const LOCATIONS = [
     description: "1915 yılında kahvehane olarak yapılan tarihi yapı, 1954'ten bu yana kütüphane olarak hizmet vermektedir. Günümüzde Bebek ve Çocuk Kütüphanesi olarak kullanılmaktadır.",
     lat: 36.7172197,
     lng: 37.1193738,
-    image: "assets/yerler/kilis-cocuk-kutuphanesi/index.jpg",
+    image: "assets/yerler/kilis-cocuk-kutuphanesi/kart.jpg",
     category: "tarihi",
   },
   {
@@ -66,7 +66,7 @@ const LOCATIONS = [
     description: "1841 yılında Cudi Mehmet Paşa Camii ve medresesi olarak inşa edilen yapı, 1930'dan itibaren 'Kemaliye', 1997'den beri de Kemaliye İlköğretim Okulu adıyla eğitim vermektedir.",
     lat: 36.716396,
     lng: 37.11806,
-    image: "assets/yerler/kemaliye-ilkokulu/index.jpg",
+    image: "assets/yerler/kemaliye-ilkokulu/kart.jpg",
     category: "tarihi",
   },
   {
@@ -75,7 +75,7 @@ const LOCATIONS = [
     description: "Peygamber Efendimiz'in çeşnigir başı olan Şeyh Mansur Simatî Hz. için bu bölgeye 1858 yılında türbe ve mescit yapılmıştır.",
     lat: 36.696265,
     lng: 37.1251839,
-    image: "assets/yerler/seyh-mansur-turbesi/index.jpg",
+    image: "assets/yerler/seyh-mansur-turbesi/kart.jpg",
     category: "dini",
   },
   {
@@ -84,7 +84,7 @@ const LOCATIONS = [
     description: "Nakşibendi Tekkesi olarak da bilinen Şeyh Efendi Tekkesi geniş bir bahçe içindedir; 1858-1859 yıllarında Şeyh Abdullah Sermest Efendi tarafından yaptırılmıştır.",
     lat: 36.713842,
     lng: 37.109613,
-    image: "assets/yerler/seyh-efendi-turbesi/index.jpg",
+    image: "assets/yerler/seyh-efendi-turbesi/kart.jpg",
     category: "dini",
   },
   {
@@ -94,7 +94,7 @@ const LOCATIONS = [
     // yaklaşık: bu yerin kendi QR'ı yok, PDF metnindeki komşu referans noktasından türetildi
     lat: 36.7134169,
     lng: 37.1153042,
-    image: "assets/yerler/kit-kit-dede-turbesi/index.jpg",
+    image: "assets/yerler/kit-kit-dede-turbesi/kart.jpg",
     category: "dini",
   },
   {
@@ -103,7 +103,7 @@ const LOCATIONS = [
     description: "Cennetle müjdelendiklerine inanılan Hz. Zübeyr ve Hz. Talha'nın yattığı türbedir; Hz. Zübeyr İslamiyeti kabul eden 5., Hz. Talha ise 6. kişidir.",
     lat: 36.7142024,
     lng: 37.1181464,
-    image: "assets/yerler/zubeyr-ve-talha-turbesi/index.jpg",
+    image: "assets/yerler/zubeyr-ve-talha-turbesi/kart.jpg",
     category: "dini",
   },
   {
@@ -113,7 +113,7 @@ const LOCATIONS = [
     // yaklaşık: bu yerin kendi QR'ı yok, PDF metnindeki komşu referans noktasından türetildi
     lat: 36.7162044,
     lng: 37.1142374,
-    image: "assets/yerler/canbolat-turbesi/index.jpg",
+    image: "assets/yerler/canbolat-turbesi/kart.jpg",
     category: "dini",
   },
   {
@@ -123,7 +123,7 @@ const LOCATIONS = [
     // yaklaşık: bu yerin kendi QR'ı yok, PDF metnindeki komşu referans noktasından türetildi
     lat: 36.7142192,
     lng: 37.1122882,
-    image: "assets/yerler/ensari-turbesi/index.jpg",
+    image: "assets/yerler/ensari-turbesi/kart.jpg",
     category: "dini",
   },
   {
@@ -133,7 +133,7 @@ const LOCATIONS = [
     // yaklaşık: bu yerin kendi QR'ı yok, PDF metnindeki komşu referans noktasından türetildi
     lat: 36.7231201,
     lng: 37.1267221,
-    image: "assets/yerler/bilal-habesi-turbesi/index.jpg",
+    image: "assets/yerler/bilal-habesi-turbesi/kart.jpg",
     category: "dini",
   },
   {
@@ -143,7 +143,7 @@ const LOCATIONS = [
     // yaklaşık: bu yerin kendi QR'ı yok, PDF metnindeki komşu referans noktasından türetildi
     lat: 36.718754,
     lng: 37.117715,
-    image: "assets/yerler/akinci-konagi/index.jpg",
+    image: "assets/yerler/akinci-konagi/kart.jpg",
     category: "tarihi",
   },
   {
@@ -153,7 +153,7 @@ const LOCATIONS = [
     // yaklaşık: bu yerin kendi QR'ı yok, PDF metnindeki komşu referans noktasından türetildi
     lat: 36.7161278,
     lng: 37.1127485,
-    image: "assets/yerler/neset-efendi-konagi/index.jpg",
+    image: "assets/yerler/neset-efendi-konagi/kart.jpg",
     category: "tarihi",
   },
   {
@@ -162,7 +162,7 @@ const LOCATIONS = [
     description: "Kilis'in tarihi sokak dokusunu günümüze taşıyan önemli güzergâhlardan biri; kabaltıları, cumbalı evleri ve taş yapılarıyla tanınır.",
     lat: 36.7181271,
     lng: 37.1188279,
-    image: "assets/yerler/salihefendi-sokak/index.jpg",
+    image: "assets/yerler/salihefendi-sokak/kart.jpg",
     category: "tarihi",
   },
   {
@@ -172,7 +172,7 @@ const LOCATIONS = [
     // yaklaşık: bu yerin kendi QR'ı yok, PDF metnindeki komşu referans noktasından türetildi
     lat: 36.7174464,
     lng: 37.1173439,
-    image: "assets/yerler/kilis-muzesi/index.jpg",
+    image: "assets/yerler/kilis-muzesi/kart.jpg",
     category: "kultur",
   },
   {
@@ -182,7 +182,7 @@ const LOCATIONS = [
     // yaklaşık: bu yerin kendi QR'ı yok, PDF metnindeki komşu referans noktasından türetildi
     lat: 36.715237,
     lng: 37.1176699,
-    image: "assets/yerler/salih-aga-kasteli/index.jpg",
+    image: "assets/yerler/salih-aga-kasteli/kart.jpg",
     category: "tarihi",
   },
   {
@@ -191,7 +191,7 @@ const LOCATIONS = [
     description: "Orhan Gazi döneminde yapıldığı bilinen Kuru Kastel, Kilis'le özdeşleşmiş ve türkülere konu olmuş önemli tarihi yapılardan biridir.",
     lat: 36.6952778,
     lng: 37.0736111,
-    image: "assets/yerler/kuru-kastel/index.jpg",
+    image: "assets/yerler/kuru-kastel/kart.jpg",
     category: "tarihi",
   },
   {
@@ -200,7 +200,7 @@ const LOCATIONS = [
     description: "Osmanlı mimarisinin gözde örneklerinden olan iki cepheli kastel, 1844-1870 yılları arasında Hacı Osman Efendi tarafından yaptırılmıştır.",
     lat: 36.7134327,
     lng: 37.1128068,
-    image: "assets/yerler/kucuk-carsi-kasteli/index.jpg",
+    image: "assets/yerler/kucuk-carsi-kasteli/kart.jpg",
     category: "tarihi",
   },
   {
@@ -209,7 +209,7 @@ const LOCATIONS = [
     description: "1654 yılında Sadrazam Mustafa Paşa (İpşir Paşa) tarafından yaptırılan İpşir Paşa Kasteli, Osmanlı dönemi su mimarisinin Kilis'teki önemli örneklerinden biridir.",
     lat: 36.7152318,
     lng: 37.1214866,
-    image: "assets/yerler/ipsir-pasa-kasteli/index.jpg",
+    image: "assets/yerler/ipsir-pasa-kasteli/kart.jpg",
     category: "tarihi",
   },
   {
@@ -219,7 +219,7 @@ const LOCATIONS = [
     // yaklaşık: bu yerin kendi QR'ı yok, PDF metnindeki komşu referans noktasından türetildi
     lat: 36.7161,
     lng: 37.115,
-    image: "assets/yerler/oksuz-minare-camii/index.jpg",
+    image: "assets/yerler/oksuz-minare-camii/kart.jpg",
     category: "dini",
   },
   {
@@ -229,7 +229,7 @@ const LOCATIONS = [
     // yaklaşık: bu yerin kendi QR'ı yok, PDF metnindeki komşu referans noktasından türetildi
     lat: 36.7162044,
     lng: 37.1142374,
-    image: "assets/yerler/alaeddin-yavasca-muzesi/index.jpg",
+    image: "assets/yerler/alaeddin-yavasca-muzesi/kart.jpg",
     category: "kultur",
   },
   {
@@ -239,7 +239,7 @@ const LOCATIONS = [
     // yaklaşık: bu yerin kendi QR'ı yok, PDF metnindeki komşu referans noktasından türetildi
     lat: 36.7161,
     lng: 37.115,
-    image: "assets/yerler/kalender-mesrep-millet-bahcesi/index.jpg",
+    image: "assets/yerler/kalender-mesrep-millet-bahcesi/kart.jpg",
     category: "doga",
   },
   {
@@ -248,7 +248,7 @@ const LOCATIONS = [
     description: "Tüm Kilis'in görüldüğü bir tepe üzerinde yer alır. Hz. Ömer'in halifeliği sırasında şehit olan Şeyh Muhammed Bedevi Hazretlerinin türbesi, külliyesi ve camisi bulunur; bu özelliğinden dolayı Seyir Tepesi olarak da bilinir.",
     lat: 36.711836,
     lng: 37.0894535,
-    image: "assets/yerler/bedevi-turbesi/index.jpg",
+    image: "assets/yerler/bedevi-turbesi/kart.jpg",
     category: "dini",
   },
   {
@@ -257,7 +257,7 @@ const LOCATIONS = [
     description: "2 bin dönümlük arazi üzerine kurulan Resul Osman Dağı Mesire Alanı; spor tesisleri, atlama kulesi ve macera parkı gibi aktivitelerle ziyaretçilere farklı deneyimler sunar.",
     lat: 36.7461798,
     lng: 37.1126375,
-    image: "assets/yerler/resul-osman-mesire-alani/index.jpg",
+    image: "assets/yerler/resul-osman-mesire-alani/kart.jpg",
     category: "doga",
   },
   {
@@ -266,7 +266,7 @@ const LOCATIONS = [
     description: "Üzüm bağları ve zeytin ağaçlarıyla çevrili Akpınar Mesire Alanı, Kilis'in güzel dinlenme ve mesire alanlarından biridir.",
     lat: 36.7319946,
     lng: 37.1563287,
-    image: "assets/yerler/akpinar-mesire-alani/index.jpg",
+    image: "assets/yerler/akpinar-mesire-alani/kart.jpg",
     category: "doga",
   },
   {
@@ -275,7 +275,7 @@ const LOCATIONS = [
     description: "Büyük bir vadiyi kontrol altına alan ihtişamlı görüntüsüyle Ravanda Kalesi'nin Hititler'e kadar uzanan çok eski bir tarihi vardır; Haçlı Seferleri'nde varlığından söz edilmiştir.",
     lat: 36.8729765,
     lng: 37.0540878,
-    image: "assets/yerler/ravanda-kalesi/index.jpg",
+    image: "assets/yerler/ravanda-kalesi/kart.jpg",
     category: "tarihi",
   },
   {
@@ -285,7 +285,7 @@ const LOCATIONS = [
     // yaklaşık: bu yerin kendi QR'ı yok, PDF metnindeki komşu referans noktasından türetildi
     lat: 36.7161,
     lng: 37.115,
-    image: "assets/yerler/anit-agaclar/index.jpg",
+    image: "assets/yerler/anit-agaclar/kart.jpg",
     category: "doga",
   },
   {
@@ -295,7 +295,7 @@ const LOCATIONS = [
     // yaklaşık: bu yerin kendi QR'ı yok, PDF metnindeki komşu referans noktasından türetildi
     lat: 36.715294,
     lng: 37.1147769,
-    image: "assets/yerler/mevlevihane-camii/index.jpg",
+    image: "assets/yerler/mevlevihane-camii/kart.jpg",
     category: "dini",
   },
   {
@@ -304,7 +304,7 @@ const LOCATIONS = [
     description: "Mimari bakımdan en önemli camilerden olan Canbolat Paşa Tekke Camisi, Canbolat Paşa Külliyesi'nin merkez yapısıdır. 1553 yılında Kilis Sancak Beyi Canbolat Bey tarafından yaptırılmıştır; Mimar Sinan'ın eseri olduğu düşünülmektedir.",
     lat: 36.7150453,
     lng: 37.1143679,
-    image: "assets/yerler/canpolat-pasa-camii/index.jpg",
+    image: "assets/yerler/canpolat-pasa-camii/kart.jpg",
     category: "dini",
   },
   {
@@ -313,7 +313,7 @@ const LOCATIONS = [
     description: "Kadıoğlu ve Karakadı isimleriyle de bilinen Kadı Camii, 'Karakadı' olarak bilinen Ali bin Ahmet Alaeddin er-Rumi tarafından yaptırılmıştır.",
     lat: 36.7164138,
     lng: 37.1150981,
-    image: "assets/yerler/karakadi-camii/index.jpg",
+    image: "assets/yerler/karakadi-camii/kart.jpg",
     category: "dini",
   },
   {
@@ -322,7 +322,7 @@ const LOCATIONS = [
     description: "Hacı Derviş Camisi, Kilis'in tarihi ibadet yapıları arasında yer alan önemli eserlerden biridir. Taş işçiliği, kubbe yapısı ve zarif minare mimarisiyle kentin inanç ve mimari mirasını yansıtmaktadır.",
     lat: 36.716488,
     lng: 37.118023,
-    image: "assets/yerler/haci-dervis-pasa-camii/index.jpg",
+    image: "assets/yerler/haci-dervis-pasa-camii/kart.jpg",
     category: "dini",
   },
   {
@@ -332,7 +332,7 @@ const LOCATIONS = [
     // yaklaşık: bu yerin kendi QR'ı yok, PDF metnindeki komşu referans noktasından türetildi
     lat: 36.7161,
     lng: 37.115,
-    image: "assets/yerler/aidesim-bazilika/index.jpg",
+    image: "assets/yerler/aidesim-bazilika/kart.jpg",
     category: "tarihi",
   },
   {
@@ -341,7 +341,7 @@ const LOCATIONS = [
     description: "Yaklaşık 11.000 yıllık tarihiyle Anadolu, Suriye ve Mezopotamya kültürlerinin kesişim noktasında yer alan önemli arkeolojik merkezlerden biridir.",
     lat: 36.6991866,
     lng: 37.1785498,
-    image: "assets/yerler/oylum-hoyuk/index.jpg",
+    image: "assets/yerler/oylum-hoyuk/kart.jpg",
     category: "tarihi",
   },
   {
@@ -350,7 +350,7 @@ const LOCATIONS = [
     description: "Kilis'in iki minareli ilk camisi olan Hacı Cümbüş Camii, külliye şeklinde bir yapıdır; 1978 yılında Kilisli hayırsever bir iş insanı tarafından yaptırılmıştır.",
     lat: 36.715893,
     lng: 37.1232889,
-    image: "assets/yerler/haci-cumbus-camii/index.jpg",
+    image: "assets/yerler/haci-cumbus-camii/kart.jpg",
     category: "dini",
   },
   {
@@ -359,7 +359,7 @@ const LOCATIONS = [
     description: "Kilis'in en eski ve en büyük camisi olan Ulu Camii, bazı arşivlerde Cami-i Kebir olarak da geçer; en eski tamir kitabesinde 1338 yılında onarıldığı belirtilir.",
     lat: 36.7135972,
     lng: 37.1152785,
-    image: "assets/yerler/ulu-camii/index.jpg",
+    image: "assets/yerler/ulu-camii/kart.jpg",
     category: "dini",
   },
   {
@@ -368,7 +368,7 @@ const LOCATIONS = [
     description: "İnce süslemeleriyle dikkat çeken Muallak Camii, Kilis'te görebileceğiniz iki katlı nadir camilerden biridir; Tanrıverdi Hasan Bey tarafından 17. yy sonlarında inşa edilmiştir.",
     lat: 36.7142767,
     lng: 37.116498,
-    image: "assets/yerler/muallak-camii/index.jpg",
+    image: "assets/yerler/muallak-camii/kart.jpg",
     category: "dini",
   },
   {
@@ -377,7 +377,7 @@ const LOCATIONS = [
     description: "Avlusunda mezarı bulunan din âlimi Şeyh Gökçe Ferdi Efendi tarafından yaptırılmıştır. 1691'de Hacı Haydar tarafından inşa ettirilen minaresi dışında özgün özelliklerini yitirmiştir.",
     lat: 36.715237,
     lng: 37.1176699,
-    image: "assets/yerler/tabakhane-camii/index.jpg",
+    image: "assets/yerler/tabakhane-camii/kart.jpg",
     category: "dini",
   },
   {
@@ -386,7 +386,7 @@ const LOCATIONS = [
     description: "Paşa Hamamı, Kilis hamamları arasında mimari özellikleriyle öne çıkan önemli yapılardan biridir. 1567 yılında Kilis Sancak Beyi Canbolad Bey tarafından yaptırılmıştır.",
     lat: 36.715406,
     lng: 37.115177,
-    image: "assets/yerler/pasa-hamami/index.jpg",
+    image: "assets/yerler/pasa-hamami/kart.jpg",
     category: "tarihi",
   },
   {
@@ -395,7 +395,7 @@ const LOCATIONS = [
     description: "Eski Hamam, Kilis'in geleneksel hamam mimarisini yansıtan önemli tarihi yapılarından biridir; günümüzde restoran olarak kullanılmaktadır.",
     lat: 36.713589,
     lng: 37.11941,
-    image: "assets/yerler/eski-hamam/index.jpg",
+    image: "assets/yerler/eski-hamam/kart.jpg",
     category: "tarihi",
   },
   {
@@ -404,7 +404,7 @@ const LOCATIONS = [
     description: "Kanuni dönemi eserlerinden biri olan Hoca Hamamı, Kilis'in sade ve özgün hamam örnekleri arasında yer alır. 1545 yılında Canbolat Paşa tarafından yaptırılmıştır.",
     lat: 36.7163127,
     lng: 37.1187143,
-    image: "assets/yerler/hoca-hamami/index.jpg",
+    image: "assets/yerler/hoca-hamami/kart.jpg",
     category: "tarihi",
   },
   {
@@ -413,7 +413,7 @@ const LOCATIONS = [
     description: "Kilis'te Ulu Camii'den sonra en eski yapı olan Cüneyne Camii, Evliya Çelebi'nin Seyahatnamesi'ne de konu olmuştur.",
     lat: 36.714298,
     lng: 37.1188069,
-    image: "assets/yerler/cuneyne-camii/index.jpg",
+    image: "assets/yerler/cuneyne-camii/kart.jpg",
     category: "dini",
   },
   {
@@ -422,7 +422,7 @@ const LOCATIONS = [
     description: "Adını içindeki beyaz taşlardan yapılmış curundan (havuz) alan Akcurun Camii'nin yapım tarihi belli değildir; kitabesine göre 1583'te Hasan kızı Seyyide Fatma tarafından yaptırılmıştır.",
     lat: 36.718754,
     lng: 37.117715,
-    image: "assets/yerler/akcurun-camii/index.jpg",
+    image: "assets/yerler/akcurun-camii/kart.jpg",
     category: "dini",
   },
   {
@@ -431,7 +431,7 @@ const LOCATIONS = [
     description: "1682 yılında Çalık Hacı Ali olarak bilinen Hacı Ali Bin Mehmet Ağa tarafından yaptırılan Çalık Camii, Kilis'in önemli inanç mekânlarından biridir.",
     lat: 36.717549,
     lng: 37.118371,
-    image: "assets/yerler/calik-camii/index.jpg",
+    image: "assets/yerler/calik-camii/kart.jpg",
     category: "dini",
   },
   {
@@ -440,7 +440,7 @@ const LOCATIONS = [
     description: "Kilis'in en eski, en meşhur ve en işlek meydanıdır. Tekye Camii, Mevlevihane Camii ve Kilis Hükümet Konağı gibi tarihi yapıları içinde barındırır.",
     lat: 36.7162044,
     lng: 37.1142374,
-    image: "assets/yerler/cumhuriyet-meydani/index.jpg",
+    image: "assets/yerler/cumhuriyet-meydani/kart.jpg",
     category: "tarihi",
   },
   {
@@ -449,7 +449,7 @@ const LOCATIONS = [
     description: "Mercidabık Meydanı, Osmanlı tarihi açısından büyük önem taşıyan Mercidabık Zaferi'nin hatırasını yaşatan önemli alanlardan biridir.",
     lat: 36.6940512,
     lng: 37.2700252,
-    image: "assets/yerler/mercidabik-meydani/index.jpg",
+    image: "assets/yerler/mercidabik-meydani/kart.jpg",
     category: "tarihi",
   },
 ];

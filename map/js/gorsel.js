@@ -5,16 +5,17 @@
 
 const KonumGorsel = (function () {
   /** CDN/tarayıcı önbelleğini kırmak için sürüm — görsel güncellemesinde artır */
-  const GORSEL_SURUM = "20260803d";
+  const GORSEL_SURUM = "20260803e";
 
   /**
-   * Konum klasöründeki standart görsel yolu: assets/yerler/{id}/index.jpg
+   * Konum klasöründeki standart görsel yolu: assets/yerler/{id}/kart.jpg
+   * (eski index.jpg CDN önbelleğinde kaldığı için kart.jpg kullanılıyor)
    */
   function standartGorselYolu(konum) {
     if (!konum || !konum.id) {
       return null;
     }
-    return `assets/yerler/${konum.id}/index.jpg`;
+    return `assets/yerler/${konum.id}/kart.jpg`;
   }
 
   /**
