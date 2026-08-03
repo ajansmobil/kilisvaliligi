@@ -57,18 +57,11 @@ const Menu = (function () {
   }
 
   /**
-   * QR kodlu görselli konumları listenin sonuna taşır
+   * Konumları ada göre (TR) sıralar
    * @param {Array} konumlar - Sıralanacak konum dizisi
    */
   function siralaKonumlar(konumlar) {
-    return [...konumlar].sort((a, b) => {
-      const aSon = a.qrGorsel ? 1 : 0;
-      const bSon = b.qrGorsel ? 1 : 0;
-      if (aSon !== bSon) {
-        return aSon - bSon;
-      }
-      return a.name.localeCompare(b.name, "tr");
-    });
+    return [...konumlar].sort((a, b) => a.name.localeCompare(b.name, "tr"));
   }
 
   /**
