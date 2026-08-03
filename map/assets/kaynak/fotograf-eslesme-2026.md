@@ -41,7 +41,7 @@
 | kuru-kastel | 1 | `sayfa1_img046_x4461.jpeg` |
 | mercidabik-meydani | 2 | `sayfa2_img037_x94.jpeg` |
 | mevlevihane-camii | 2 | `sayfa2_img059_x140.jpeg` |
-| muallak-camii | 2 | `sayfa2_img017_x54.jpeg` |
+| muallak-camii | 2 | `sayfa2_img017_x54.jpeg` (duvarda MUALLAK CAMİİ tabelası; yeniden yazıldı) |
 | neset-efendi-konagi | 1 | `sayfa1_img037_x4443.jpeg` |
 | oksuz-minare-camii | 1 | `sayfa1_img052_x4473.jpeg` |
 | oylum-hoyuk | 2 | `sayfa2_img011_x42.jpeg` |
@@ -56,5 +56,5 @@
 | sogutludere | 1 | `sayfa1_img004_x4376.jpeg` |
 | surahbil-turbesi | 1 | `sayfa1_img008_x4384.jpeg` |
 | tabakhane-camii | 2 | `sayfa2_img019_x58.jpeg` |
-| ulu-camii | 2 | `sayfa2_img015_x50.jpeg` |
+| ulu-camii | resmi | `kilis.gov.tr ulu cami-2` (PDF kartına Mevlevihane avlusu konmuştu) |
 | zubeyr-ve-talha-turbesi | 1 | `sayfa1_img026_x4419.jpeg` |

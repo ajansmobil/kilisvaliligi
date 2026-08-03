@@ -4,6 +4,9 @@
  */
 
 const KonumGorsel = (function () {
+  /** CDN/tarayıcı önbelleğini kırmak için sürüm — görsel güncellemesinde artır */
+  const GORSEL_SURUM = "20260803d";
+
   /**
    * Konum klasöründeki standart görsel yolu: assets/yerler/{id}/index.jpg
    */
@@ -15,6 +18,17 @@ const KonumGorsel = (function () {
   }
 
   /**
+   * Yerel görsel yoluna önbellek kırıcı ekler
+   */
+  function onbellekKir(yol) {
+    if (!yol) {
+      return null;
+    }
+    const ayirici = yol.includes("?") ? "&" : "?";
+    return `${yol}${ayirici}v=${GORSEL_SURUM}`;
+  }
+
+  /**
    * Konumdaki yerel görsel yolunu döndürür (varsa)
    */
   function yerelGorselUrl(konum) {
@@ -22,7 +36,7 @@ const KonumGorsel = (function () {
     if (!yol) {
       return null;
     }
-    return encodeURI(yol);
+    return encodeURI(onbellekKir(yol));
   }
 
   /**
