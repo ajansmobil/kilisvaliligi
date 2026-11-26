@@ -132,7 +132,7 @@ body {
 }
 
 .header-logo {
-  height: 32px;
+  height: 38px;
   width: auto;
   margin-left: 8px;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
@@ -560,8 +560,10 @@ body {
 
 /* Logo görseli — ortada büyüyerek gelir, hafif nabız, sonra kaybolur */
 .logo-splash-img {
-  width: min(340px, 78vw);
+  width: auto;
   height: auto;
+  max-width: min(340px, 78vw);
+  max-height: 72vh;
   opacity: 0;
   transform: scale(0.55);
   filter: drop-shadow(0 12px 28px rgba(81, 87, 74, 0.22));
